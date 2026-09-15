@@ -1,0 +1,831 @@
+<html lang="en">
+ <head>
+  <title>
+        
+            Bingbing Xu's Homepage
+        
+    </title>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport" />
+  <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+  <link href="./static/css/dist/styles.css" rel="stylesheet" />
+  <script>if(localStorage.getItem('color-theme')==='dark'||!('color-theme' in localStorage)&&window.matchMedia('(prefers-color-scheme: dark)').matches){document.documentElement.classList.add('dark')}else{document.documentElement.classList.remove('dark')}</script>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JXSH4312WH"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-JXSH4312WH')</script>
+ </head>
+ <body>
+  <div class="w-2 fixed right-0 flex items-end flex-col">
+   <button class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-lg p-2" id="theme-toggle" type="button">
+    <svg class="hidden w-5 h-5" viewbox="0 0 20 20" fill="currentColor" id="theme-toggle-dark-icon" xmlns="http://www.w3.org/2000/svg">
+     <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+    </svg> 
+    <svg class="hidden w-5 h-5" viewbox="0 0 20 20" fill="currentColor" id="theme-toggle-light-icon" xmlns="http://www.w3.org/2000/svg">
+     <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" fill-rule="evenodd"></path>
+    </svg> 
+    <svg class="hidden w-5 h-5" viewbox="0 0 20 20" fill="currentColor" id="theme-toggle-dark-icon" xmlns="http://www.w3.org/2000/svg">
+     <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+    </svg> 
+    <svg class="hidden w-5 h-5" viewbox="0 0 20 20" fill="currentColor" id="theme-toggle-light-icon" xmlns="http://www.w3.org/2000/svg">
+     <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" fill-rule="evenodd"></path>
+    </svg></button>
+<!--    <button class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-lg p-2" data-dropdown-toggle="dropdown" id="dropdownDefaultButton">
+    <svg class="w-5 h-5" viewbox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
+     <path d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg></button>
+   <div class="hidden z-10 bg-white divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600" id="dropdown">
+    <select class="w-25 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" id="langSelector"><option selected="" value="en">English</option><option value="zh-hans">简体中文</option></select>
+   </div> -->
+  </div>
+  <div class="container mx-auto p-4 mt-2 max-w-7xl">
+   <div class="flex items-center space-x-0 px-2 sm:px-10 md:px-20 lg:px-40 lg:space-x-4 mb-0 pb-0">
+<!--     <div class="min-w-fit">
+     <img alt="Yige Yuan" class="lg:rounded-full hidden lg:block lg:h-full shadow-md" src="./static/homepage/images/yyg.jpg" />
+    </div> -->
+    <div class="information">
+     <p></p>
+     <h1><span class="name"><strong>Bingbing</strong></span> <span class="name"><strong>Xu</strong></span> 
+      <div class="sm:hidden"></div> (徐冰冰)</h1>
+     <p class="block mt-1 text-lg leading-tight font-medium">Associate Professor</p>
+     <p class="block mt-1 text-lg leading-tight">
+       <p> CAS Key Laboratory of AI Safety
+       <p> Institute of Computing Technology, Chinese Academy of Sciences
+     </p>
+     <p class="flex items-center space-x-1">
+      <svg class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+       <path d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" fill-rule="evenodd" />
+      </svg> <span> No.6 Kexueyuan South Road Zhongguancun, Haidian District, Beijing, China </span></p>
+     <p class="flex items-center space-x-1">
+      <svg class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+       <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+      </svg> <span> Homepage: <a href="https://bingbing-x.github.io">https://bingbing-x.github.io</a> </span></p>
+     <p class="flex items-center space-x-1">
+      <svg class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+       <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+       <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+      </svg> <span> Email: <a href="mailto:xubingbing@ict.ac.cn">xubingbing@ict.ac.cn</a></span></p>
+    <!--  <p class="flex items-center space-x-1">
+      <svg class="h-5 w-5" viewbox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+       <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+      </svg> <span> Github: <a href="https://github.com/bingbing-x">https://github.com/bingbing-x</a> </span></p> -->
+     <p class="flex items-center space-x-1">
+      <svg class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+       <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+      </svg> <span> <a href="https://scholar.google.com/citations?user=PSx2drgAAAAJ">Google Scholar</a> </span></p>
+     <p class="flex items-center space-x-1">
+      <svg class="h-5 w-5" viewbox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+       <path d="M12 .75a8.25 8.25 0 00-4.135 15.39c.686.398 1.115 1.008 1.134 1.623a.75.75 0 00.577.706c.352.083.71.148 1.074.195.323.041.6-.218.6-.544v-4.661a6.714 6.714 0 01-.937-.171.75.75 0 11.374-1.453 5.261 5.261 0 002.626 0 .75.75 0 11.374 1.452 6.712 6.712 0 01-.937.172v4.66c0 .327.277.586.6.545.364-.047.722-.112 1.074-.195a.75.75 0 00.577-.706c.02-.615.448-1.225 1.134-1.623A8.25 8.25 0 0012 .75z" />
+       <path d="M9.013 19.9a.75.75 0 01.877-.597 11.319 11.319 0 004.22 0 .75.75 0 11.28 1.473 12.819 12.819 0 01-4.78 0 .75.75 0 01-.597-.876zM9.754 22.344a.75.75 0 01.824-.668 13.682 13.682 0 002.844 0 .75.75 0 11.156 1.492 15.156 15.156 0 01-3.156 0 .75.75 0 01-.668-.824z" clip-rule="evenodd" fill-rule="evenodd" />
+      </svg> <span class="break-normal research_interests"> Research Interest: <a href=""> Graph Foundation Model</a> <a href=""> Graph Neural Networks</a> <a href=""> Social Computing</a>  </span></p>
+    </div>
+   </div>
+   <div class="px-2 sm:px-10 md:px-20 lg:px-40">
+    
+
+    <h2 id="Introduction"><strong>Introduction</strong></h2>
+    <p>I am currently an associate professor at the CAS Key Laboratory of AI Safety. I obtained my PhD degree from <a href="https://xx.edu.cn">Institute of Computing Technology, Chinese Academy of Sciences</a> in 2021, under the supervision of <a href="https://scholar.google.com/citations?user=hY8aLqAAAAAJ">Prof. Xueqi Cheng</a> and <a href="http://www.ict.ac.cn/sourcedb/cn/jssrck/201402/t20140221_4037648.html">Prof. Huawei Shen</a> . </p>
+
+    
+    <h2 id="Advertisements"><strong>Advertisements</strong></h2>
+    <p>We are looking for students (third/fourth year students in university or masters) as interns to collaborate with us in research, as well as assistant professors and postdoc related to graph deep learning. </p>
+    <p>If you are interested, please feel free to contact us at any time.</p>
+    
+
+
+    <h2 id="publications"><strong>Publications</strong></h2>
+    <ol>
+      
+      <li>
+      <div class="title">
+       <a href='https://arxiv.org/pdf/2405.16224'>Negative as Positive: Enhancing Out-of-distribution Generalization for Graph Contrastive Learning</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+        Zixu Wang, <strong><u>Bingbing Xu</u></strong>, Yige Yuan, Huawei Shen, Xueqi Cheng <br>
+       </div>
+       <div class="pubs">
+        <span class="type">C</span> SIGIR 2024
+       </div>
+       <!-- <a href="https://arxiv.org/pdf/2405.16224">[Paper]</a> -->
+       <!-- <a href="https://github.com/yuanyige/tea">[Code]</a> -->
+       <!-- <a href="./static/uploads/pdfs/cvpr2024-tea-poster.pdf">[Poster]</a> -->
+       <!-- <a id="collapseExample-11-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-11">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of TEA" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" alt="" src="./static/uploads/covers/cvpr2024-tea-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+             Illustration of TEA.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we propose to investigate generalization from an energy-based perspective and introduce TEA, a test-time adaptation method which transforms the trained classifier into an energy-based model and aligns the model's distribution with the test data's, enhancing its ability to perceive test distributions and thus improving overall generalizability.</p>
+         </div>
+        </div>
+       </div> -->
+      </div></li>
+
+     <li>
+      <div class="title">
+       <a href='https://arxiv.org/abs/2311.14402'>TEA: Test-time Energy Adaptation</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+        Yige Yuan, <strong><u>Bingbing Xu</u></strong>, Liang Hou, Fei Sun, Huawei Shen, Xueqi Cheng <br>
+       </div>
+       <div class="pubs">
+        <span class="type">C</span> IEEE/CVF Computer Vision and Pattern Recognition Conference (CVPR 2024)
+         <!-- <p><div>Seattle WA, USA; Main Track; CCF-A</div></p> -->
+       </div>
+       <a href="https://arxiv.org/abs/2311.14402">[Paper]</a>
+       <a href="https://github.com/yuanyige/tea">[Code]</a>
+       <!-- <a href="./static/uploads/pdfs/cvpr2024-tea-poster.pdf">[Poster]</a> -->
+       <a id="collapseExample-11-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-11">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of TEA" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" alt="" src="./static/uploads/covers/cvpr2024-tea-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+             Illustration of TEA.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we propose to investigate generalization from an energy-based perspective and introduce TEA, a test-time adaptation method which transforms the trained classifier into an energy-based model and aligns the model's distribution with the test data's, enhancing its ability to perceive test distributions and thus improving overall generalizability.</p>
+         </div>
+        </div>
+       </div>
+      </div></li>
+
+     <li>
+      <div class="title">
+       <a href='https://arxiv.org/abs/2305.15835'> PDE+: Enhancing Generalization via PDE with Adaptive Distributional Diffusion</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+        Yige Yuan, <strong><u>Bingbing Xu</u></strong>, Bo Lin, Liang Hou, Fei Sun, Huawei Shen, Xueqi Cheng<br>
+       </div>
+       <div class="pubs">
+        <span class="type">C</span> Annual AAAI Conference on Artificial Intelligence (AAAI 2024)
+        <!-- <p><div>Vancouver, Canada; Main Track; CCF-A</div></p> -->
+       </div>
+       <a href="https://arxiv.org/abs/2305.15835">[Paper]</a>
+       <a href="https://github.com/yuanyige/pde-add">[Code]</a>
+       <a href="./static/uploads/pdfs/aaai2024-pdeadd-poster.pdf">[Poster]</a>
+       <a href="./static/uploads/pdfs/aaai2024-pdeadd-slides.pdf">[Sildes]</a>
+       <a href="./static/uploads/pdfs/aaai2024-pdeadd-video.mp4">[Video]</a>
+       <a id="collapseExample-10-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-10">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of PDE-ADD" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" alt="" src="./static/uploads/covers/aaai2024-pdeadd-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+             Illustration of PDE-ADD.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we propose to investigate generalization from PDE perspective and propose PDE-ADD framework. We introduce adaptive distributional diffusion into transport equation to enhance smoothness of its solution, thereby improving generalization directly via the underlying function of NN.</p>
+         </div>
+        </div>
+       </div>
+      </div></li>
+
+
+     <li>
+      <div class="title">
+         <a href='https://arxiv.org/abs/2211.10929'>Towards Generalizable Graph Contrastive Learning: An Information Theory Perspective</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+       Yige Yuan, <strong><u>Bingbing Xu</u></strong>, Huawei Shen, Qi Cao, Keting Cen, Wen Zheng, Xueqi Cheng<br>
+       </div>
+       <div class="pubs">
+        <span class="type">J</span> Neural Networks (NN), Volume 172, April 2024 
+        <!-- <p><div>Elsevier; CCF-B, SCI-I</div></p> -->
+       </div>
+       <a href="https://arxiv.org/abs/2108.09638">[Paper]</a>
+       <a href="https://github.com/yuanyige/infoadv">[Code]</a>
+       <a id="collapseExample-8-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-8">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of InfoAdv" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" src="./static/uploads/covers/nn-infoadv-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Illustration of InfoAdv.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we propose a GCL generalization ability metric and prove a MI upper bound for it from an information-theoretic perspective. Guided by the bound, we design an InfoAdv framework, which can be applied to current GCL models and achieves SOTA performance.</p>
+         </div>
+        </div>
+       </div>
+      </div></li>
+
+
+     
+
+     <li>
+      <div class="title">
+      <a href='https://arxiv.org/abs/2211.09813'>History Driven Sampling for Scalable Graph Neural Networks</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+        Yang Li, <strong><u>Bingbing Xu</u></strong>, Fei Sun, Qi Cao, Yige Yuan, and Huawei Shen<br>
+       </div>
+       <div class="pubs">
+        <span class="type">C</span>  (DASFAA 2024) 
+        <!-- <p><div>New Orleans, USA; Main Track; CCF-A</div></p> -->
+       </div>
+       <!-- <a href="https://arxiv.org/abs/2211.09813">[Paper]</a> -->
+<!--        <a href="https://github.com/liang-hou/augself-gan">[Code]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-poster.pdf">[Poster]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-sildes.pdf">[Slides]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-video.mp4">[Video]</a> -->
+      <!--  <a id="collapseExample-9-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-9">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" src="./static/uploads/covers/neurips2023-augselfgan-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Illustration of.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we </p>
+         </div>
+        </div>
+       </div> -->
+      </div></li>
+
+       <li>
+      <div class="title">
+      <a href='https://arxiv.org/pdf/2402.00904'>Graph Domain Adaptation: Challenges, Progress and Prospects</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+        Boshen Shi, Yongqing Wang, Fangda Guo, <strong><u>Bingbing Xu</u></strong>, Huawei Shen, Xueqi Cheng<br>
+       </div>
+       <div class="pubs">
+<!--         <span class="type">C</span> Annual Conference on Neural Information Processing Systems (NeurIPS 2023) 
+        <p><div>New Orleans, USA; Main Track; CCF-A</div></p> -->
+       </div>
+       <!-- <a href="https://arxiv.org/abs/2211.09813">[Paper]</a> -->
+<!--        <a href="https://github.com/liang-hou/augself-gan">[Code]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-poster.pdf">[Poster]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-sildes.pdf">[Slides]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-video.mp4">[Video]</a> -->
+       <!-- <a id="collapseExample-9-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-9">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" src="./static/uploads/covers/neurips2023-augselfgan-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Illustration of.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we </p>
+         </div>
+        </div>
+       </div> -->
+      </div></li>
+
+       <li>
+      <div class="title">
+      <a href='https://arxiv.org/abs/2308.09499'>Bridged-gnn: Knowledge bridge learning for effective knowledge transfer</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+        Wendong Bi, Xueqi Cheng, <strong><u>Bingbing Xu</u></strong>, Xiaoqian Sun, Li Xi, Huawei Shen<br>
+       </div>
+       <div class="pubs">
+        <span class="type">C</span> CIKM 2023
+        <!-- <p><div>New Orleans, USA; Main Track; CCF-A</div></p> -->
+       </div>
+       <!-- <a href="https://arxiv.org/abs/2211.09813">[Paper]</a> -->
+       <a href="https://github.com/wendongbi/Bridged-GNN">[Code]</a>
+<!--        <a href="./static/uploads/pdfs/neurips2023-augselfgan-poster.pdf">[Poster]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-sildes.pdf">[Slides]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-video.mp4">[Video]</a> -->
+      <!--  <a id="collapseExample-9-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-9">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" src="./static/uploads/covers/neurips2023-augselfgan-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Illustration of.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we </p>
+         </div>
+        </div>
+       </div> -->
+      </div></li>
+
+
+       <li>
+      <div class="title">
+      <a href='https://dl.acm.org/doi/10.1145/3583780.3615237'>DCGNN: Dual-Channel Graph Neural Network for Social Bot Detection</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+        Nuoyan Lyv, <strong><u>Bingbing Xu</u></strong>, Fangda Guo, and Huawei Shen<br>
+       </div>
+       <div class="pubs">
+        <span class="type">C</span> CIKM 2023
+        <!-- <p><div>New Orleans, USA; Main Track; CCF-A</div></p> -->
+       </div>
+       <!-- <a href="https://arxiv.org/abs/2211.09813">[Paper]</a> -->
+<!--        <a href="https://github.com/liang-hou/augself-gan">[Code]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-poster.pdf">[Poster]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-sildes.pdf">[Slides]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-video.mp4">[Video]</a> -->
+      <!--  <a id="collapseExample-9-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-9">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" src="./static/uploads/covers/neurips2023-augselfgan-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Illustration of.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we </p>
+         </div>
+        </div>
+       </div> -->
+      </div></li>
+
+
+       <li>
+      <div class="title">
+      <a href='https://dl.acm.org/doi/pdf/10.1145/3580305.3599319'>DyTed: Disentangled Representation Learning for Discrete-time Dynamic Graph</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+        Kaike Zhang, Qi Cao, Gaolin Fang, <strong><u>Bingbing Xu</u></strong>, Hongjian Zou, Huawei Shen, and Xueqi Cheng<br>
+       </div>
+       <div class="pubs">
+        <span class="type">C</span> KDD 2023
+        <!-- <p><div>New Orleans, USA; Main Track; CCF-A</div></p> -->
+       </div>
+       <!-- <a href="https://arxiv.org/abs/2211.09813">[Paper]</a> -->
+<!--        <a href="https://github.com/liang-hou/augself-gan">[Code]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-poster.pdf">[Poster]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-sildes.pdf">[Slides]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-video.mp4">[Video]</a> -->
+       <!-- <a id="collapseExample-9-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-9">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" src="./static/uploads/covers/neurips2023-augselfgan-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Illustration of.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we </p>
+         </div>
+        </div>
+       </div> -->
+      </div></li>
+
+
+       <li>
+      <div class="title">
+      <a href='https://dl.acm.org/doi/pdf/10.1145/3580305.3599865'>MIDLG: Mutual Information based Dual Level GNN for Transaction Fraud Complaint Verification</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+        Wen Zheng,  <strong><u>Bingbing Xu</u></strong>, Emiao Lu, Yang Li, Xuan Zong, and Huawei Shen<br>
+       </div>
+       <div class="pubs">
+        <span class="type">C</span> KDD 2023
+        <!-- <p><div>New Orleans, USA; Main Track; CCF-A</div></p> -->
+       </div>
+       <!-- <a href="https://arxiv.org/abs/2211.09813">[Paper]</a> -->
+<!--        <a href="https://github.com/liang-hou/augself-gan">[Code]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-poster.pdf">[Poster]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-sildes.pdf">[Slides]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-video.mp4">[Video]</a> -->
+       <!-- <a id="collapseExample-9-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-9">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" src="./static/uploads/covers/neurips2023-augselfgan-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Illustration of.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we </p>
+         </div>
+        </div>
+       </div> -->
+      </div></li>
+
+
+       <li>
+      <div class="title">
+      <a href='https://dl.acm.org/doi/abs/10.1145/3543873.3587375'>Simple Multi-view Can Bring Powerful Graph Neural Network</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+        <strong><u>Bingbing Xu</u></strong>, Yang Li Qi Cao, and Huawei Shen<br>
+       </div>
+       <div class="pubs">
+        <span class="type">C</span> Companion proceedings of WWW 2023 
+        <!-- <p><div>New Orleans, USA; Main Track; CCF-A</div></p> -->
+       </div>
+       <!-- <a href="https://arxiv.org/abs/2211.09813">[Paper]</a> -->
+<!--        <a href="https://github.com/liang-hou/augself-gan">[Code]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-poster.pdf">[Poster]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-sildes.pdf">[Slides]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-video.mp4">[Video]</a> -->
+       <!-- <a id="collapseExample-9-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-9">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" src="./static/uploads/covers/neurips2023-augselfgan-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Illustration of.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we </p>
+         </div>
+        </div>
+       </div> -->
+      </div></li>
+
+
+       <li>
+      <div class="title">
+      <a href='https://dl.acm.org/doi/abs/10.1145/3543873.3587323'>Towards deeper graph neural networks via layer-adaptive</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+         <strong><u>Bingbing Xu</u></strong>, Bin Xie, and Huawei Shen<br>
+       </div>
+       <div class="pubs">
+        <span class="type">C</span> Companion proceedings of WWW 2023  
+        <!-- <p><div>New Orleans, USA; Main Track; CCF-A</div></p> -->
+       </div>
+       <!-- <a href="https://arxiv.org/abs/2211.09813">[Paper]</a> -->
+<!--        <a href="https://github.com/liang-hou/augself-gan">[Code]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-poster.pdf">[Poster]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-sildes.pdf">[Slides]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-video.mp4">[Video]</a> -->
+       <!-- <a id="collapseExample-9-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-9">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" src="./static/uploads/covers/neurips2023-augselfgan-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Illustration of.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we </p>
+         </div>
+        </div>
+       </div> -->
+      </div></li>
+
+
+
+       <li>
+      <div class="title">
+      <a href='https://arxiv.org/abs/2302.00873'>Predicting the silent majority on graphs: Knowledge transferable graph neural network</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+         Wendong Bi, <strong><u>Bingbing Xu</u></strong>, Xiaoqian Sun, Li Xu, Huawei Shen, Xueqi Cheng<br>
+       </div>
+       <div class="pubs">
+        <span class="type">C</span> WWW 2023
+        <!-- <p><div>New Orleans, USA; Main Track; CCF-A</div></p> -->
+       </div>
+       <!-- <a href="https://arxiv.org/abs/2211.09813">[Paper]</a> -->
+       <a href="https://github.com/wendongbi/KT-GNN">[Code]</a>
+       <!-- <a href="./static/uploads/pdfs/neurips2023-augselfgan-poster.pdf">[Poster]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-sildes.pdf">[Slides]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-video.mp4">[Video]</a>
+       <a id="collapseExample-9-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-9">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" src="./static/uploads/covers/neurips2023-augselfgan-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Illustration of.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we </p>
+         </div>
+        </div>
+       </div> -->
+      </div></li>
+
+
+       <li>
+      <div class="title">
+      <a href='https://arxiv.org/abs/2112.02740'>When spatio-temporal meet wavelets: Disentangled traffic forecasting via efficient spectral graph attention networks</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+        Yuchen Fang, Yanjun Qin, Haiyong Luo, Fang Zhao, <strong><u>Bingbing Xu</u></strong>, Chenxing Wang, and Liang Zeng<br>
+       </div>
+       <div class="pubs">
+        <span class="type">C</span> ICDE 2023 
+        <!-- <p><div>New Orleans, USA; Main Track; CCF-A</div></p> -->
+       </div>
+       <!-- <a href="https://arxiv.org/abs/2211.09813">[Paper]</a> -->
+<!--        <a href="https://github.com/liang-hou/augself-gan">[Code]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-poster.pdf">[Poster]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-sildes.pdf">[Slides]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-video.mp4">[Video]</a> -->
+       <!-- <a id="collapseExample-9-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-9">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" src="./static/uploads/covers/neurips2023-augselfgan-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Illustration of.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we </p>
+         </div>
+        </div>
+       </div> -->
+      </div></li>
+
+
+       <li>
+      <div class="title">
+      <a href='https://www.sciencedirect.com/science/article/abs/pii/S0893608022003008'>Location-aware convolutional neural networks for graph classification</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+        Zhaohui Wang, Qi Cao, Huawei Shen, <strong><u>Bingbing Xu</u></strong>, Keting Cen and Xueqi Cheng<br>
+       </div>
+       <div class="pubs">
+        <span class="type">J</span> Neural Networks (NN)
+        <!-- <p><div>New Orleans, USA; Main Track; CCF-A</div></p> -->
+       </div>
+       <!-- <a href="https://arxiv.org/abs/2211.09813">[Paper]</a> -->
+<!--        <a href="https://github.com/liang-hou/augself-gan">[Code]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-poster.pdf">[Poster]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-sildes.pdf">[Slides]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-video.mp4">[Video]</a> -->
+       <!-- <a id="collapseExample-9-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-9">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" src="./static/uploads/covers/neurips2023-augselfgan-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Illustration of.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we </p>
+         </div>
+        </div>
+       </div> -->
+      </div></li>
+
+
+       <li>
+      <div class="title">
+      <a href='https://arxiv.org/abs/2301.13492'>Company-as-tribe: Company financial risk assessment on tribe-style graph with hierarchical graph neural networks</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+        Wendong Bi, <strong><u>Bingbing Xu</u></strong>, Xiaoqian Sun, Li Xu, Huawei Shen, Xueqi Cheng<br>
+       </div>
+       <div class="pubs">
+        <span class="type">C</span> KDD 2022
+        <!-- <p><div>New Orleans, USA; Main Track; CCF-A</div></p> -->
+       </div>
+       <!-- <a href="https://arxiv.org/abs/2211.09813">[Paper]</a> -->
+       <a href="https://github.com/wendongbi/TH-GNN">[Code]</a>
+       <!-- <a href="./static/uploads/pdfs/neurips2023-augselfgan-poster.pdf">[Poster]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-sildes.pdf">[Slides]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-video.mp4">[Video]</a>
+       <a id="collapseExample-9-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-9">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" src="./static/uploads/covers/neurips2023-augselfgan-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Illustration of.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we </p>
+         </div>
+        </div>
+       </div> -->
+      </div></li>
+
+
+       <li>
+      <div class="title">
+      <a href='https://cdn.aaai.org/ojs/16582/16582-13-20076-1-2-20210518.pdf'>Towards consumer loan fraud detection: Graph neural networks with role-constrained conditional random field</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+        <strong><u>Bingbing Xu</u></strong>, Huawei Shen, Bingjie Sun, Rong An, Qi Cao, and Xueqi Cheng<br>
+       </div>
+       <div class="pubs">
+        <span class="type">C</span> AAAI 2021 
+        <!-- <p><div>New Orleans, USA; Main Track; CCF-A</div></p> -->
+       </div>
+       <!-- <a href="https://arxiv.org/abs/2211.09813">[Paper]</a> -->
+<!--        <a href="https://github.com/liang-hou/augself-gan">[Code]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-poster.pdf">[Poster]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-sildes.pdf">[Slides]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-video.mp4">[Video]</a> -->
+       <!-- <a id="collapseExample-9-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-9">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" src="./static/uploads/covers/neurips2023-augselfgan-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Illustration of.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we </p>
+         </div>
+        </div>
+       </div> -->
+      </div></li>
+
+
+      <li>
+      <div class="title">
+      <a href='https://arxiv.org/abs/2007.13435'>Label-consistency based graph neural networks for semi-supervised node classification</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+         <strong><u>Bingbing Xu</u></strong>, Junjie Huang, Liang Hou, Huawei Shen, Jinhua Gao and Xueqi Cheng<br>
+       </div>
+       <div class="pubs">
+        <span class="type">C</span> SIGIR 2020
+        <!-- <p><div>New Orleans, USA; Main Track; CCF-A</div></p> -->
+       </div>
+       <!-- <a href="https://arxiv.org/abs/2211.09813">[Paper]</a> -->
+       <a href="https://github.com/Eilene/LCGNN">[Code]</a>
+       <!-- <a href="./static/uploads/pdfs/neurips2023-augselfgan-poster.pdf">[Poster]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-sildes.pdf">[Slides]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-video.mp4">[Video]</a>
+       <a id="collapseExample-9-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-9">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" src="./static/uploads/covers/neurips2023-augselfgan-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Illustration of.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we </p>
+         </div>
+        </div>
+       </div> -->
+      </div></li>
+
+       <li>
+      <div class="title">
+      <a href='http://www.arxiv.org/abs/2007.16002'>Graph convolutional networks using heat kernel for semi-supervised learning</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+       <strong><u>Bingbing Xu</u></strong>, Huawei Shen, Qi Cao, Keting Cen and Xueqi Cheng<br>
+       </div>
+       <div class="pubs">
+        <span class="type">C</span> IJCAI 2019 
+        <!-- <p><div>New Orleans, USA; Main Track; CCF-A</div></p> -->
+       </div>
+       <!-- <a href="https://arxiv.org/abs/2211.09813">[Paper]</a> -->
+       <a href="https://github.com/Eilene/GraphHeat">[Code]</a>
+     <!--   <a href="./static/uploads/pdfs/neurips2023-augselfgan-poster.pdf">[Poster]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-sildes.pdf">[Slides]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-video.mp4">[Video]</a> -->
+       <!-- <a id="collapseExample-9-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-9">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" src="./static/uploads/covers/neurips2023-augselfgan-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Illustration of.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we </p>
+         </div>
+        </div>
+       </div> -->
+      </div></li>
+
+
+       <li>
+      <div class="title">
+      <a href='https://arxiv.org/abs/1904.07785'>Graph wavelet neural network</a> <br>
+      </div> 
+      <div class="paper-info">
+       <div class="author">
+         <strong><u>Bingbing Xu</u></strong>, Huawei Shen, Qi Cao, Yunqi Qiu and Xueqi Cheng<br>
+       </div>
+       <div class="pubs">
+        <span class="type">C</span> ICLR 2019 
+        <!-- <p><div>New Orleans, USA; Main Track; CCF-A</div></p> -->
+       </div>
+       <!-- <a href="https://arxiv.org/abs/2211.09813">[Paper]</a> -->
+       <a href="https://github.com/Eilene/GWNN">[Code]</a>
+      <!--  <a href="./static/uploads/pdfs/neurips2023-augselfgan-poster.pdf">[Poster]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-sildes.pdf">[Slides]</a>
+       <a href="./static/uploads/pdfs/neurips2023-augselfgan-video.mp4">[Video]</a>
+       <a id="collapseExample-9-button" role="button"> [Summary] </a>
+       <div class="hidden" id="collapseExample-9">
+        <div class="-ml-4 flex flex-wrap flex-row items-center p-2 pb-0 rounded-lg shadow-lg">
+         <div class="basis-full md:basis-1/3 p-2">
+          <figure class="max-w-lg">
+           <img alt="Illustration of" class="rounded-t-lg max-h-60 mx-auto dark:shadow-gray-800" src="./static/uploads/covers/neurips2023-augselfgan-pic.png" />
+           <figcaption class="mt-2 text-sm text-center text-gray-500">
+            Illustration of.
+           </figcaption>
+          </figure>
+         </div>
+         <div class="p-2 basis-full md:basis-2/3 text-justify">
+          <p class="text-xs md:text-base mb-2 font-normal text-gray-400"><span class="text-gray-700 font-bold dark:text-gray-300">TL;DR: </span> In this paper, we </p>
+         </div>
+        </div>
+       </div> -->
+      </div></li>
+
+
+
+    </ol>
+
+    <ul>
+<!--      <li>Conference Reviewers</li>
+     <p>ICANN2020, ASONAM2020, ECMLPKDD2022</p>
+     <li>Journal Reviewers</li>
+     <p>Journal of Neural Networks, IEEE Transactions on Computational Social Systems, Information Processing and Management, Plos One</p> -->
+    </ul>
+   </div>
+   <footer class="p-4 px-2 sm:px-10 md:px-20 lg:px-40 sm:p-6">
+    <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+     <span class="text-sm text-gray-500 sm:text-center">&copy; 2024 <a class="hover:underline" href="https://bingbing-x.github.io/">Bingbing Xu</a>. All Rights Reserved. </span>
+     <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">Designed and developed by <a class="hover:underline" href="https://bingbing-x.github.io/"></a><a class="hover:underline" href="https://bingbing-x.github.io/"> Bingbing Xu </a>. 
+       <div class="text-gray-500 text-sm">
+        <span>Last update: Feb. 28, 2024 </span>
+       </div> <script>var themeToggleDarkIcon=document.getElementById('theme-toggle-dark-icon');var themeToggleLightIcon=document.getElementById('theme-toggle-light-icon');if(localStorage.getItem('color-theme')==='dark'||!('color-theme' in localStorage)&&window.matchMedia('(prefers-color-scheme: dark)').matches){themeToggleLightIcon.classList.remove('hidden')}else{themeToggleDarkIcon.classList.remove('hidden')};var themeToggleBtn=document.getElementById('theme-toggle');themeToggleBtn.addEventListener('click',function(){themeToggleDarkIcon.classList.toggle('hidden');themeToggleLightIcon.classList.toggle('hidden');if(localStorage.getItem('color-theme')){if(localStorage.getItem('color-theme')==='light'){document.documentElement.classList.add('dark');localStorage.setItem('color-theme','dark')}else{document.documentElement.classList.remove('dark');localStorage.setItem('color-theme','light')}}else{if(document.documentElement.classList.contains('dark')){document.documentElement.classList.remove('dark');localStorage.setItem('color-theme','light')}else{document.documentElement.classList.add('dark');localStorage.setItem('color-theme','dark')}}})</script> <script>const langButton=document.getElementById('dropdownDefaultButton');langButton.addEventListener('click',()=>{const a=document.getElementById('dropdown');a.classList.toggle('hidden')});const langSelectorEle=document.getElementById('langSelector');langSelectorEle.addEventListener('change',()=>{const a=langSelectorEle.value;if(a!="en"){const b=window.location.href;let c=b;if(window.location.pathname=='/'){c=`${b}/${a}`}else{c=b.replace('en',a)};window.location.replace(c)}})</script> <script>for(let a=1;a<=11;++a){let b=document.getElementById(`collapseExample-${a}-button`);let c=document.getElementById(`collapseExample-${a}`);if(b){b.addEventListener('click',()=>{c.classList.toggle('hidden')})}}</script> </span>
+     </div>
+    </div>
+   </footer>
+  </div>
+ </body>
+</html>

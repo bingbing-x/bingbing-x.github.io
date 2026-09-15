@@ -1,0 +1,364 @@
+# =============================================================
+#  个人主页内容 —— 以后更新主页，改这一个文件就够了
+#  改完 commit + push，GitHub Pages 约 1 分钟后自动生效
+#
+#  【TODO】标记处需要你补充或核对真实信息
+# =============================================================
+
+# ---------- 基本信息 ----------
+profile:
+  name_en: Bingbing Xu
+  name_zh: 徐冰冰
+  title: Associate Professor
+  affiliation:
+    - CAS Key Laboratory of AI Safety
+    - Institute of Computing Technology, Chinese Academy of Sciences
+  location: No.6 Kexueyuan South Road, Zhongguancun, Haidian District, Beijing, China
+  # 头像：把图片放到 static/homepage/images/ 下，这里填文件名；留空则不显示
+  photo:            # TODO 例如 avatar.jpg
+  emails:
+    - xubingbing@ict.ac.cn
+  links:
+    - name: Google Scholar
+      icon: scholar
+      url: https://scholar.google.com/citations?user=PSx2drgAAAAJ
+    - name: GitHub
+      icon: github
+      url: https://github.com/bingbing-x
+    # - name: DBLP
+    #   icon: link
+    #   url:        # TODO 有的话填上
+  interests:
+    - Graph Foundation Model
+    - Graph Neural Networks
+    - Social Computing
+
+# ---------- Google Analytics ----------
+# 原先用的是模板作者的 ID，数据都进了别人账号，已移除。
+# 填入你自己的 (G-XXXXXXXXXX) 才启用；留空则完全不加载跟踪脚本。
+analytics_id:
+
+# ---------- 关于我 ----------
+about: >
+  I am an Associate Professor at the CAS Key Laboratory of AI Safety,
+  Institute of Computing Technology, Chinese Academy of Sciences.
+  I received my Ph.D. from the Institute of Computing Technology, Chinese Academy
+  of Sciences in 2021, under the supervision of
+  <a href="https://scholar.google.com/citations?user=hY8aLqAAAAAJ">Prof. Xueqi Cheng</a>
+  and
+  <a href="http://www.ict.ac.cn/sourcedb/cn/jssrck/201402/t20140221_4037648.html">Prof. Huawei Shen</a>.
+
+  My research centers on graph representation learning — from spectral graph
+  neural networks to graph foundation models — and its applications in social
+  computing and financial risk analysis.
+  <!-- TODO 这段是我根据你的论文方向概括的，请按自己的话调整 -->
+
+# 招生信息。不需要就整段删掉（或写成 prospective_students:）
+prospective_students: >
+  We are looking for students (third/fourth year undergraduates or master's
+  students) as interns to collaborate with us in research, as well as assistant
+  professors and postdocs working on graph deep learning.
+  If you are interested, please feel free to contact me at any time.
+
+# ---------- News ----------
+# 最新的放最上面；超过 news_limit 条会折叠，点击展开
+news_limit: 5
+news:
+  # TODO 这里请填你的近期动态，下面两条是格式示例，请替换掉
+  - date: 2024-05
+    text: 'One paper accepted at <strong>SIGIR 2024</strong>: Negative as Positive.'
+  - date: 2024-02
+    text: 'Two papers accepted at <strong>CVPR 2024</strong> and <strong>AAAI 2024</strong>.'
+
+# ---------- 教育与工作经历 ----------
+experience:
+  - role: Associate Professor
+    org: CAS Key Laboratory of AI Safety, Institute of Computing Technology, CAS
+    place: Beijing, China
+    date: TODO 起始年 - Present
+    note:
+  - role: Ph.D.
+    org: Institute of Computing Technology, Chinese Academy of Sciences
+    place: Beijing, China
+    date: TODO 起始年 - 2021
+    note: >
+      Advisors: <a href="https://scholar.google.com/citations?user=hY8aLqAAAAAJ">Prof. Xueqi Cheng</a>
+      and <a href="http://www.ict.ac.cn/sourcedb/cn/jssrck/201402/t20140221_4037648.html">Prof. Huawei Shen</a>
+  # TODO 本科经历，补齐后取消下面几行的注释
+  # - role: B.S.
+  #   org: TODO 本科学校
+  #   place: TODO 城市, China
+  #   date: TODO 起 - 止
+  #   note: TODO 专业
+
+# ---------- 论文 ----------
+# 字段：
+#   title   必填
+#   url     可选，标题的跳转链接
+#   authors 必填。用 **粗体** 标出自己，会渲染成加粗下划线
+#   venue   必填，会议/期刊名
+#   year    必填，用于分组
+#   type    C=会议 / J=期刊 / P=预印本
+#   meta    可选，副信息（地点、Main Track、CCF 等级）
+#   links   可选，链接按钮
+#   image   可选，示意图文件名，放在 static/uploads/covers/ 下
+#   tldr    可选，一句话总结；填了才会出现 [Summary] 按钮
+publications:
+  - title: "Negative as Positive: Enhancing Out-of-distribution Generalization for Graph Contrastive Learning"
+    url: https://arxiv.org/pdf/2405.16224
+    authors: "Zixu Wang, **Bingbing Xu**, Yige Yuan, Huawei Shen, Xueqi Cheng"
+    venue: SIGIR 2024
+    year: 2024
+    type: C
+    links:
+      - name: Paper
+        url: https://arxiv.org/pdf/2405.16224
+
+  - title: "TEA: Test-time Energy Adaptation"
+    url: https://arxiv.org/abs/2311.14402
+    authors: "Yige Yuan, **Bingbing Xu**, Liang Hou, Fei Sun, Huawei Shen, Xueqi Cheng"
+    venue: IEEE/CVF Computer Vision and Pattern Recognition Conference (CVPR 2024)
+    year: 2024
+    type: C
+    meta: Seattle WA, USA; Main Track; CCF-A
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2311.14402
+      - name: Code
+        url: https://github.com/yuanyige/tea
+    image: cvpr2024-tea-pic.png
+    tldr: >
+      Investigates generalization from an energy-based perspective and introduces TEA,
+      a test-time adaptation method that turns the trained classifier into an
+      energy-based model and aligns its distribution with the test data's.
+
+  - title: "PDE+: Enhancing Generalization via PDE with Adaptive Distributional Diffusion"
+    url: https://arxiv.org/abs/2305.15835
+    authors: "Yige Yuan, **Bingbing Xu**, Bo Lin, Liang Hou, Fei Sun, Huawei Shen, Xueqi Cheng"
+    venue: Annual AAAI Conference on Artificial Intelligence (AAAI 2024)
+    year: 2024
+    type: C
+    meta: Vancouver, Canada; Main Track; CCF-A
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2305.15835
+      - name: Code
+        url: https://github.com/yuanyige/pde-add
+      - name: Poster
+        url: ./static/uploads/pdfs/aaai2024-pdeadd-poster.pdf
+      - name: Slides
+        url: ./static/uploads/pdfs/aaai2024-pdeadd-slides.pdf
+      - name: Video
+        url: ./static/uploads/pdfs/aaai2024-pdeadd-video.mp4
+    image: aaai2024-pdeadd-pic.png
+    tldr: >
+      Investigates generalization from a PDE perspective, introducing adaptive
+      distributional diffusion into the transport equation to enhance the smoothness
+      of its solution.
+
+  - title: "Towards Generalizable Graph Contrastive Learning: An Information Theory Perspective"
+    url: https://arxiv.org/abs/2211.10929
+    authors: "Yige Yuan, **Bingbing Xu**, Huawei Shen, Qi Cao, Keting Cen, Wen Zheng, Xueqi Cheng"
+    venue: Neural Networks, Volume 172
+    year: 2024
+    type: J
+    meta: Elsevier; CCF-B, SCI-I
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2211.10929
+      - name: Code
+        url: https://github.com/yuanyige/infoadv
+    image: nn-infoadv-pic.png
+    tldr: >
+      Proposes a GCL generalization metric, proves a mutual-information upper bound
+      for it, and designs the InfoAdv framework guided by that bound.
+
+  - title: History Driven Sampling for Scalable Graph Neural Networks
+    url: https://arxiv.org/abs/2211.09813
+    authors: "Yang Li, **Bingbing Xu**, Fei Sun, Qi Cao, Yige Yuan, Huawei Shen"
+    venue: DASFAA 2024
+    year: 2024
+    type: C
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2211.09813
+
+  - title: "Graph Domain Adaptation: Challenges, Progress and Prospects"
+    url: https://arxiv.org/pdf/2402.00904
+    authors: "Boshen Shi, Yongqing Wang, Fangda Guo, **Bingbing Xu**, Huawei Shen, Xueqi Cheng"
+    venue: arXiv preprint
+    year: 2024
+    type: P
+    links:
+      - name: Paper
+        url: https://arxiv.org/pdf/2402.00904
+
+  - title: "Bridged-GNN: Knowledge Bridge Learning for Effective Knowledge Transfer"
+    url: https://arxiv.org/abs/2308.09499
+    authors: "Wendong Bi, Xueqi Cheng, **Bingbing Xu**, Xiaoqian Sun, Li Xi, Huawei Shen"
+    venue: CIKM 2023
+    year: 2023
+    type: C
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2308.09499
+      - name: Code
+        url: https://github.com/wendongbi/Bridged-GNN
+
+  - title: "DCGNN: Dual-Channel Graph Neural Network for Social Bot Detection"
+    url: https://dl.acm.org/doi/10.1145/3583780.3615237
+    authors: "Nuoyan Lyv, **Bingbing Xu**, Fangda Guo, Huawei Shen"
+    venue: CIKM 2023
+    year: 2023
+    type: C
+    links:
+      - name: Paper
+        url: https://dl.acm.org/doi/10.1145/3583780.3615237
+
+  - title: "DyTed: Disentangled Representation Learning for Discrete-time Dynamic Graph"
+    url: https://dl.acm.org/doi/pdf/10.1145/3580305.3599319
+    authors: "Kaike Zhang, Qi Cao, Gaolin Fang, **Bingbing Xu**, Hongjian Zou, Huawei Shen, Xueqi Cheng"
+    venue: KDD 2023
+    year: 2023
+    type: C
+    links:
+      - name: Paper
+        url: https://dl.acm.org/doi/pdf/10.1145/3580305.3599319
+
+  - title: "MIDLG: Mutual Information based Dual Level GNN for Transaction Fraud Complaint Verification"
+    url: https://dl.acm.org/doi/pdf/10.1145/3580305.3599865
+    authors: "Wen Zheng, **Bingbing Xu**, Emiao Lu, Yang Li, Xuan Zong, Huawei Shen"
+    venue: KDD 2023
+    year: 2023
+    type: C
+    links:
+      - name: Paper
+        url: https://dl.acm.org/doi/pdf/10.1145/3580305.3599865
+
+  - title: Simple Multi-view Can Bring Powerful Graph Neural Network
+    url: https://dl.acm.org/doi/abs/10.1145/3543873.3587375
+    authors: "**Bingbing Xu**, Yang Li, Qi Cao, Huawei Shen"
+    venue: Companion Proceedings of WWW 2023
+    year: 2023
+    type: C
+    links:
+      - name: Paper
+        url: https://dl.acm.org/doi/abs/10.1145/3543873.3587375
+
+  - title: Towards Deeper Graph Neural Networks via Layer-Adaptive
+    url: https://dl.acm.org/doi/abs/10.1145/3543873.3587323
+    authors: "**Bingbing Xu**, Bin Xie, Huawei Shen"
+    venue: Companion Proceedings of WWW 2023
+    year: 2023
+    type: C
+    links:
+      - name: Paper
+        url: https://dl.acm.org/doi/abs/10.1145/3543873.3587323
+
+  - title: "Predicting the Silent Majority on Graphs: Knowledge Transferable Graph Neural Network"
+    url: https://arxiv.org/abs/2302.00873
+    authors: "Wendong Bi, **Bingbing Xu**, Xiaoqian Sun, Li Xu, Huawei Shen, Xueqi Cheng"
+    venue: WWW 2023
+    year: 2023
+    type: C
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2302.00873
+      - name: Code
+        url: https://github.com/wendongbi/KT-GNN
+
+  - title: "When Spatio-Temporal Meet Wavelets: Disentangled Traffic Forecasting via Efficient Spectral Graph Attention Networks"
+    url: https://arxiv.org/abs/2112.02740
+    authors: "Yuchen Fang, Yanjun Qin, Haiyong Luo, Fang Zhao, **Bingbing Xu**, Chenxing Wang, Liang Zeng"
+    venue: ICDE 2023
+    year: 2023
+    type: C
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2112.02740
+
+  - title: Location-aware Convolutional Neural Networks for Graph Classification
+    url: https://www.sciencedirect.com/science/article/abs/pii/S0893608022003008
+    authors: "Zhaohui Wang, Qi Cao, Huawei Shen, **Bingbing Xu**, Keting Cen, Xueqi Cheng"
+    venue: Neural Networks
+    year: 2022
+    type: J
+    links:
+      - name: Paper
+        url: https://www.sciencedirect.com/science/article/abs/pii/S0893608022003008
+
+  - title: "Company-as-Tribe: Company Financial Risk Assessment on Tribe-Style Graph with Hierarchical Graph Neural Networks"
+    url: https://arxiv.org/abs/2301.13492
+    authors: "Wendong Bi, **Bingbing Xu**, Xiaoqian Sun, Li Xu, Huawei Shen, Xueqi Cheng"
+    venue: KDD 2022
+    year: 2022
+    type: C
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2301.13492
+      - name: Code
+        url: https://github.com/wendongbi/TH-GNN
+
+  - title: "Towards Consumer Loan Fraud Detection: Graph Neural Networks with Role-Constrained Conditional Random Field"
+    url: https://cdn.aaai.org/ojs/16582/16582-13-20076-1-2-20210518.pdf
+    authors: "**Bingbing Xu**, Huawei Shen, Bingjie Sun, Rong An, Qi Cao, Xueqi Cheng"
+    venue: AAAI 2021
+    year: 2021
+    type: C
+    links:
+      - name: Paper
+        url: https://cdn.aaai.org/ojs/16582/16582-13-20076-1-2-20210518.pdf
+
+  - title: Label-Consistency Based Graph Neural Networks for Semi-Supervised Node Classification
+    url: https://arxiv.org/abs/2007.13435
+    authors: "**Bingbing Xu**, Junjie Huang, Liang Hou, Huawei Shen, Jinhua Gao, Xueqi Cheng"
+    venue: SIGIR 2020
+    year: 2020
+    type: C
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2007.13435
+      - name: Code
+        url: https://github.com/Eilene/LCGNN
+
+  - title: Graph Convolutional Networks Using Heat Kernel for Semi-Supervised Learning
+    url: http://www.arxiv.org/abs/2007.16002
+    authors: "**Bingbing Xu**, Huawei Shen, Qi Cao, Keting Cen, Xueqi Cheng"
+    venue: IJCAI 2019
+    year: 2019
+    type: C
+    links:
+      - name: Paper
+        url: http://www.arxiv.org/abs/2007.16002
+      - name: Code
+        url: https://github.com/Eilene/GraphHeat
+
+  - title: Graph Wavelet Neural Network
+    url: https://arxiv.org/abs/1904.07785
+    authors: "**Bingbing Xu**, Huawei Shen, Qi Cao, Yunqi Qiu, Xueqi Cheng"
+    venue: ICLR 2019
+    year: 2019
+    type: C
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/1904.07785
+      - name: Code
+        url: https://github.com/Eilene/GWNN
+
+# ---------- 奖项荣誉 ----------
+# 原主页没有这一节。留空则整块不显示。
+awards: []
+  # - text: TODO 奖项名称, 颁发机构
+  #   date: "2024"
+
+# ---------- 学术服务 ----------
+# 原主页这一节被整段注释掉了；下面是注释里的旧内容，请核对并补充。
+services:
+  - label: Conference Reviewer
+    text: ICANN 2020, ASONAM 2020, ECML-PKDD 2022    # TODO 补充近年的
+  - label: Journal Reviewer
+    text: Neural Networks, IEEE Transactions on Computational Social Systems, Information Processing and Management, PLOS ONE
+
+# ---------- 页脚 ----------
+# 留空则自动显示构建日期
+last_update:

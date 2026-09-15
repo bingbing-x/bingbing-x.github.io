@@ -1,0 +1,16 @@
+title: Bingbing Xu
+description: Homepage of Bingbing Xu, Associate Professor at ICT, Chinese Academy of Sciences
+url: https://bingbing-x.github.io
+baseurl: ""
+
+# 本页面是纯 Jekyll 静态站，GitHub Pages 会自动构建，无需本地安装任何东西。
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+sass:
+  style: compressed
+
+plugins: []

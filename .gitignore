@@ -1,0 +1,16 @@
+# macOS
+.DS_Store
+._*
+
+# Jekyll 构建产物（GitHub Pages 在服务端构建，本地产物不提交）
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# 依赖
+vendor/
+Gemfile.lock
+
+# 编辑器
+.vscode/
+.idea/
