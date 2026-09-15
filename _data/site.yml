@@ -11,7 +11,8 @@ profile:
   name_zh: 徐冰冰
   title: Associate Professor
   affiliation:
-    - CAS Key Laboratory of AI Safety
+    - Research Center for Cognitive Intelligence Systems
+    - State Key Laboratory of AI Safety
     - Institute of Computing Technology, Chinese Academy of Sciences
   location: No.6 Kexueyuan South Road, Zhongguancun, Haidian District, Beijing, China
   # 头像：把图片放到 static/homepage/images/ 下，这里填文件名；留空则不显示
@@ -25,9 +26,9 @@ profile:
     - name: GitHub
       icon: github
       url: https://github.com/bingbing-x
-    # - name: DBLP
-    #   icon: link
-    #   url:        # TODO 有的话填上
+    - name: ICT Profile
+      icon: link
+      url: https://ict.cas.cn/sourcedb/cn/jssrck/202312/t20231201_6939367.html
   interests:
     - Graph Foundation Model
     - Graph Neural Networks
@@ -40,18 +41,22 @@ analytics_id:
 
 # ---------- 关于我 ----------
 about: >
-  I am an Associate Professor at the CAS Key Laboratory of AI Safety,
-  Institute of Computing Technology, Chinese Academy of Sciences.
-  I received my Ph.D. from the Institute of Computing Technology, Chinese Academy
-  of Sciences in 2021, under the supervision of
+  I am an Associate Professor at the Research Center for Cognitive Intelligence
+  Systems and the State Key Laboratory of AI Safety, Institute of Computing
+  Technology, Chinese Academy of Sciences (ICT, CAS), where I also serve as a
+  master's supervisor.
+
+  I received my Ph.D. from ICT, CAS in 2021 under the supervision of
   <a href="https://scholar.google.com/citations?user=hY8aLqAAAAAJ">Prof. Xueqi Cheng</a>
   and
-  <a href="http://www.ict.ac.cn/sourcedb/cn/jssrck/201402/t20140221_4037648.html">Prof. Huawei Shen</a>.
+  <a href="http://www.ict.ac.cn/sourcedb/cn/jssrck/201402/t20140221_4037648.html">Prof. Huawei Shen</a>,
+  and received my B.S. from Harbin Institute of Technology (Weihai) in 2016.
 
   My research centers on graph representation learning — from spectral graph
-  neural networks to graph foundation models — and its applications in social
-  computing and financial risk analysis.
-  <!-- TODO 这段是我根据你的论文方向概括的，请按自己的话调整 -->
+  neural networks such as
+  <a href="https://arxiv.org/abs/1904.07785">Graph Wavelet Neural Network</a>
+  to graph foundation models — and its applications in financial risk control
+  and social computing.
 
 # 招生信息。不需要就整段删掉（或写成 prospective_students:）
 prospective_students: >
@@ -63,33 +68,45 @@ prospective_students: >
 # ---------- News ----------
 # 最新的放最上面；超过 news_limit 条会折叠，点击展开
 news_limit: 5
+# TODO 下面是我根据你的论文和履历整理的，请核对；最新动态（2025 至今）请自行补充
 news:
-  # TODO 这里请填你的近期动态，下面两条是格式示例，请替换掉
   - date: 2024-05
     text: 'One paper accepted at <strong>SIGIR 2024</strong>: Negative as Positive.'
   - date: 2024-02
     text: 'Two papers accepted at <strong>CVPR 2024</strong> and <strong>AAAI 2024</strong>.'
+  - date: 2023-09
+    text: 'Started as <strong>Associate Professor</strong> at ICT, CAS.'
+  - date: 2023-08
+    text: 'Two papers accepted at <strong>CIKM 2023</strong>.'
+  - date: 2023-05
+    text: 'Two papers accepted at <strong>KDD 2023</strong>.'
+  - date: 2023-01
+    text: 'Received the <strong>NSFC Young Scientists Fund</strong> as Principal Investigator.'
 
 # ---------- 教育与工作经历 ----------
 experience:
   - role: Associate Professor
-    org: CAS Key Laboratory of AI Safety, Institute of Computing Technology, CAS
-    place: Beijing, China
-    date: TODO 起始年 - Present
-    note:
-  - role: Ph.D.
     org: Institute of Computing Technology, Chinese Academy of Sciences
     place: Beijing, China
-    date: TODO 起始年 - 2021
+    date: Sep. 2023 - Present
+    note: Master's supervisor
+  - role: Special Research Assistant
+    org: Institute of Computing Technology, Chinese Academy of Sciences
+    place: Beijing, China
+    date: Jul. 2021 - Sep. 2023
+    note:
+  - role: Ph.D. in Computer Science
+    org: Institute of Computing Technology, Chinese Academy of Sciences
+    place: Beijing, China
+    date: Sep. 2016 - Jul. 2021
     note: >
       Advisors: <a href="https://scholar.google.com/citations?user=hY8aLqAAAAAJ">Prof. Xueqi Cheng</a>
       and <a href="http://www.ict.ac.cn/sourcedb/cn/jssrck/201402/t20140221_4037648.html">Prof. Huawei Shen</a>
-  # TODO 本科经历，补齐后取消下面几行的注释
-  # - role: B.S.
-  #   org: TODO 本科学校
-  #   place: TODO 城市, China
-  #   date: TODO 起 - 止
-  #   note: TODO 专业
+  - role: B.S.
+    org: Harbin Institute of Technology (Weihai)
+    place: Weihai, China
+    date: Jul. 2012 - Jul. 2016
+    note:
 
 # ---------- 论文 ----------
 # 字段：
@@ -277,6 +294,13 @@ publications:
       - name: Paper
         url: https://arxiv.org/abs/2112.02740
 
+  - title: A Survey on Graph Convolutional Neural Network
+    authors: "**Bingbing Xu**, Keting Cen, Junjie Huang, Huawei Shen, Xueqi Cheng"
+    venue: Chinese Journal of Computers (计算机学报)
+    year: 2020
+    type: J
+    # TODO 有在线链接的话补上 url 和 links
+
   - title: Location-aware Convolutional Neural Networks for Graph Classification
     url: https://www.sciencedirect.com/science/article/abs/pii/S0893608022003008
     authors: "Zhaohui Wang, Qi Cao, Huawei Shen, **Bingbing Xu**, Keting Cen, Xueqi Cheng"
@@ -346,16 +370,40 @@ publications:
         url: https://github.com/Eilene/GWNN
 
 # ---------- 奖项荣誉 ----------
-# 原主页没有这一节。留空则整块不显示。
-awards: []
-  # - text: TODO 奖项名称, 颁发机构
-  #   date: "2024"
+# 来源：ICT 个人主页
+awards:
+  - text: Outstanding Researcher, Institute of Computing Technology, CAS
+    date: "2022"
+  - text: '"New Hundred Stars" Program, Institute of Computing Technology, CAS'
+    date: "2022"
+  - text: Outstanding Ph.D. Graduate of Beijing
+    date: "2021"
+  - text: CAS President's Award for Outstanding Students
+    date: "2021"
+  - text: National Scholarship for Doctoral Students
+    date: "2020"
+
+# ---------- 科研项目 ----------
+# 来源：ICT 个人主页。留空则整块不显示。
+grants:
+  - text: >
+      Network Representation and Mining Methods for Financial Risk Perception
+      and Control
+    funder: National Natural Science Foundation of China (Young Scientists Fund)
+    role: Principal Investigator
+    date: 2023 - 2025
+  - text: >
+      Financial Risk Perception and Control Based on Network Representation
+      Learning
+    funder: China Postdoctoral Science Foundation (General Program)
+    role: Principal Investigator
+    date: 2022 - 2024
 
 # ---------- 学术服务 ----------
-# 原主页这一节被整段注释掉了；下面是注释里的旧内容，请核对并补充。
+# 原主页这一节被整段注释掉了；下面是从注释里挖出的旧内容，停留在 2022 年。
 services:
   - label: Conference Reviewer
-    text: ICANN 2020, ASONAM 2020, ECML-PKDD 2022    # TODO 补充近年的
+    text: ICANN 2020, ASONAM 2020, ECML-PKDD 2022    # TODO 补充近年担任的审稿/AC 等
   - label: Journal Reviewer
     text: Neural Networks, IEEE Transactions on Computational Social Systems, Information Processing and Management, PLOS ONE
 

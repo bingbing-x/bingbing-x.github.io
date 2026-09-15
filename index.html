@@ -173,6 +173,24 @@ layout: default
 </section>
 {%- endif %}
 
+{%- if d.grants and d.grants.size > 0 %}
+<section id="grants">
+  <h2>Research Grants</h2>
+  <ul class="exp">
+    {%- for g in d.grants %}
+    <li>
+      <div class="head">
+        <span class="role">{{ g.text }}</span>
+        {%- if g.date %}<span class="date">{{ g.date }}</span>{% endif %}
+      </div>
+      <div class="org">{{ g.funder }}</div>
+      {%- if g.role and g.role != '' %}<div class="note">{{ g.role }}</div>{% endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
 {%- if d.services and d.services.size > 0 %}
 <section id="services">
   <h2>Academic Services</h2>
