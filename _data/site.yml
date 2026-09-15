@@ -294,12 +294,13 @@ publications:
       - name: Paper
         url: https://arxiv.org/abs/2112.02740
 
+  # 这篇来自 ICT 官方主页，但该页未标注年份。我暂按 2020 归类，
+  # TODO 请核对年份是否正确，并补上在线链接（url / links）
   - title: A Survey on Graph Convolutional Neural Network
     authors: "**Bingbing Xu**, Keting Cen, Junjie Huang, Huawei Shen, Xueqi Cheng"
     venue: Chinese Journal of Computers (计算机学报)
     year: 2020
     type: J
-    # TODO 有在线链接的话补上 url 和 links
 
   - title: Location-aware Convolutional Neural Networks for Graph Classification
     url: https://www.sciencedirect.com/science/article/abs/pii/S0893608022003008
