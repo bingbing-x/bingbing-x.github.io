@@ -1,209 +1,47 @@
 ---
 layout: default
+permalink: /
 ---
 {%- assign d = site.data.site -%}
-{%- assign p = d.profile -%}
 
-<header class="hero">
-  {%- if p.photo and p.photo != '' %}
-  <img class="hero-photo" src="{{ '/static/homepage/images/' | append: p.photo | relative_url }}"
-       alt="{{ p.name_en }}">
-  {%- endif %}
-
-  <div class="hero-info">
-    <h1 class="hero-name">{{ p.name_en }}{% if p.name_zh %}<span class="zh">{{ p.name_zh }}</span>{% endif %}</h1>
-    <p class="hero-title">{{ p.title }}</p>
-    <p class="hero-affil">
-      {%- for line in p.affiliation %}{{ line }}{% unless forloop.last %}<br>{% endunless %}{% endfor -%}
-    </p>
-
-    <div class="hero-meta">
-      {%- if p.location %}
-      <div class="row">{% include icon.html name="location" %}<span>{{ p.location }}</span></div>
-      {%- endif %}
-      {%- if p.emails and p.emails.size > 0 %}
-      <div class="row">{% include icon.html name="email" %}<span>
-        {%- for e in p.emails -%}
-          <a href="mailto:{{ e }}">{{ e }}</a>{% unless forloop.last %} &middot; {% endunless %}
-        {%- endfor -%}
-      </span></div>
-      {%- endif %}
-    </div>
-
-    {%- if p.links and p.links.size > 0 %}
-    <div class="hero-links">
-      {%- for l in p.links %}
-      <a href="{{ l.url }}" target="_blank" rel="noopener">{% include icon.html name=l.icon %}{{ l.name }}</a>
-      {%- endfor %}
-    </div>
-    {%- endif %}
-
-    {%- if p.interests and p.interests.size > 0 %}
-    <div class="tags">
-      {%- for i in p.interests %}<span class="tag">{{ i }}</span>{% endfor %}
-    </div>
-    {%- endif %}
-  </div>
-</header>
-
-{%- if d.about and d.about != '' %}
-<section id="about">
+<section>
   <h2>About</h2>
-  <div class="about">{{ d.about | markdownify }}</div>
+  <div class="prose">{{ d.about | markdownify }}</div>
 
   {%- if d.prospective_students and d.prospective_students != '' %}
   <div class="callout">
-    <strong>Openings.</strong> {{ d.prospective_students }}
+    <strong>Openings</strong>
+    <p>{{ d.prospective_students }}</p>
   </div>
   {%- endif %}
+</section>
+
+{%- assign featured = d.publications | where: "featured", true %}
+{%- if featured.size > 0 %}
+<section>
+  <div class="head-row">
+    <h2>Selected Publications</h2>
+    <a class="more" href="{{ '/publications/' | relative_url }}">All {{ d.publications.size }} publications &rarr;</a>
+  </div>
+  {%- for pub in featured %}
+  {% include paper-card.html pub=pub %}
+  {%- endfor %}
 </section>
 {%- endif %}
 
 {%- if d.news and d.news.size > 0 %}
-<section id="news">
-  <h2>News</h2>
-  {%- assign limit = d.news_limit | default: 5 %}
-  <ul class="news">
-    {%- for n in d.news %}
-    <li{% if forloop.index > limit %} class="news-extra" hidden{% endif %}>
-      <span class="date">{{ n.date }}</span>
-      <span>{{ n.text }}</span>
-    </li>
-    {%- endfor %}
-  </ul>
-  {%- if d.news.size > limit %}
-  <button id="news-more" type="button" data-more="Show all {{ d.news.size }} news &darr;" data-less="Show less &uarr;">
-    Show all {{ d.news.size }} news &darr;
-  </button>
-  {%- endif %}
-</section>
-{%- endif %}
-
-{%- if d.experience and d.experience.size > 0 %}
-<section id="experience">
-  <h2>Experience</h2>
-  <ul class="exp">
-    {%- for e in d.experience %}
-    <li>
-      <div class="head">
-        <span class="role">{{ e.role }}</span>
-        {%- if e.date %}<span class="date">{{ e.date }}</span>{% endif %}
-      </div>
-      <div class="org">{{ e.org }}{% if e.place %}, {{ e.place }}{% endif %}</div>
-      {%- if e.note and e.note != '' %}<div class="note">{{ e.note }}</div>{% endif %}
+<section>
+  <div class="head-row">
+    <h2>Recent News</h2>
+    <a class="more" href="{{ '/news/' | relative_url }}">All news &rarr;</a>
+  </div>
+  <ul class="feed">
+    {%- for n in d.news limit: 5 %}
+    <li class="feed-item feed-{{ n.kind | default: 'misc' }}">
+      <span class="feed-date">{{ n.date }}</span>
+      <span class="feed-text">{{ n.text }}</span>
     </li>
     {%- endfor %}
   </ul>
 </section>
 {%- endif %}
-
-{%- if d.publications and d.publications.size > 0 %}
-<section id="publications">
-  <h2>Publications</h2>
-
-  {%- comment %} 按年份倒序分组 {% endcomment -%}
-  {%- assign by_year = d.publications | group_by: "year" | sort: "name" | reverse %}
-
-  <nav class="year-nav">
-    {%- for g in by_year %}<a href="#y{{ g.name }}">{{ g.name }}</a>{% endfor %}
-  </nav>
-
-  {%- for g in by_year %}
-  <h3 class="year-head" id="y{{ g.name }}">{{ g.name }}</h3>
-
-  {%- for pub in g.items %}
-  {%- assign uid = g.name | append: "-" | append: forloop.index %}
-  <article class="pub">
-    <p class="pub-title">
-      {%- if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
-      {%- else %}{{ pub.title }}{% endif -%}
-    </p>
-
-    {%- comment -%}
-      作者串里用 **Name** 标记自己。按 ** 切分后，奇数段即被标记的部分，
-      渲染成加粗下划线；其余原样输出。
-    {%- endcomment -%}
-    <p class="pub-authors">
-      {%- assign segs = pub.authors | split: '**' -%}
-      {%- for seg in segs -%}
-        {%- assign odd = forloop.index0 | modulo: 2 -%}
-        {%- if odd == 1 -%}<span class="me">{{ seg }}</span>{%- else -%}{{ seg }}{%- endif -%}
-      {%- endfor -%}
-    </p>
-
-    <p class="pub-venue">
-      {%- if pub.type %}<span class="type">{{ pub.type }}</span>{% endif -%}
-      {{ pub.venue }}
-    </p>
-    {%- if pub.meta and pub.meta != '' %}<p class="pub-meta">{{ pub.meta }}</p>{% endif %}
-
-    {%- if pub.links.size > 0 or pub.tldr %}
-    <div class="pub-links">
-      {%- for l in pub.links %}
-      <a href="{{ l.url | relative_url }}" target="_blank" rel="noopener">{{ l.name }}</a>
-      {%- endfor %}
-      {%- if pub.tldr and pub.tldr != '' %}
-      <button type="button" class="summary-btn" data-target="sum-{{ uid }}">Summary</button>
-      {%- endif %}
-    </div>
-    {%- endif %}
-
-    {%- if pub.tldr and pub.tldr != '' %}
-    <div class="pub-summary" id="sum-{{ uid }}">
-      {%- if pub.image and pub.image != '' %}
-      <img src="{{ '/static/uploads/covers/' | append: pub.image | relative_url }}" alt="Illustration of {{ pub.title }}">
-      {%- endif %}
-      <p><span class="tldr-label">TL;DR&nbsp;</span>{{ pub.tldr }}</p>
-    </div>
-    {%- endif %}
-  </article>
-  {%- endfor %}
-  {%- endfor %}
-</section>
-{%- endif %}
-
-{%- if d.awards and d.awards.size > 0 %}
-<section id="awards">
-  <h2>Awards &amp; Honors</h2>
-  <ul class="awards">
-    {%- for a in d.awards %}
-    <li><span>{{ a.text }}</span>{% if a.date %}<span class="date">{{ a.date }}</span>{% endif %}</li>
-    {%- endfor %}
-  </ul>
-</section>
-{%- endif %}
-
-{%- if d.grants and d.grants.size > 0 %}
-<section id="grants">
-  <h2>Research Grants</h2>
-  <ul class="exp">
-    {%- for g in d.grants %}
-    <li>
-      <div class="head">
-        <span class="role">{{ g.text }}</span>
-        {%- if g.date %}<span class="date">{{ g.date }}</span>{% endif %}
-      </div>
-      <div class="org">{{ g.funder }}</div>
-      {%- if g.role and g.role != '' %}<div class="note">{{ g.role }}</div>{% endif %}
-    </li>
-    {%- endfor %}
-  </ul>
-</section>
-{%- endif %}
-
-{%- if d.services and d.services.size > 0 %}
-<section id="services">
-  <h2>Academic Services</h2>
-  <dl class="services">
-    {%- for s in d.services %}
-    <dt>{{ s.label }}</dt>
-    <dd>{{ s.text }}</dd>
-    {%- endfor %}
-  </dl>
-</section>
-{%- endif %}
-
-<footer>
-  <span>&copy; {{ 'now' | date: "%Y" }} {{ p.name_en }}. All rights reserved.</span>
-  <span>Last update: {% if d.last_update and d.last_update != '' %}{{ d.last_update }}{% else %}{{ 'now' | date: "%b %-d, %Y" }}{% endif %}</span>
-</footer>

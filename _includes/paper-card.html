@@ -1,0 +1,42 @@
+{%- comment -%}
+  代表作大卡片：左侧配图（没有图时退化为文字徽章块，不会出现破图），
+  右侧标题 / 作者 / TL;DR / 链接。
+  用法：{% include paper-card.html pub=pub %}
+{%- endcomment -%}
+{%- assign pub = include.pub -%}
+<article class="card">
+  <div class="card-visual">
+    {%- if pub.image and pub.image != '' %}
+    <img src="{{ '/static/uploads/covers/' | append: pub.image | relative_url }}"
+         alt="Illustration of {{ pub.title | strip_html }}" loading="lazy">
+    {%- else %}
+    <div class="card-visual-blank" aria-hidden="true">
+      <span>{{ pub.badge | default: pub.venue | truncate: 18, '' }}</span>
+    </div>
+    {%- endif %}
+    {%- if pub.badge and pub.badge != '' %}
+    <span class="card-badge">{{ pub.badge }}</span>
+    {%- endif %}
+  </div>
+
+  <div class="card-body">
+    <h3 class="card-title">
+      {%- if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+      {%- else %}{{ pub.title }}{% endif -%}
+    </h3>
+
+    <p class="card-authors">{% include authors.html s=pub.authors %}</p>
+
+    {%- if pub.tldr and pub.tldr != '' %}
+    <p class="card-tldr">{{ pub.tldr }}</p>
+    {%- endif %}
+
+    {%- if pub.links.size > 0 %}
+    <div class="card-links">
+      {%- for l in pub.links %}
+      <a href="{{ l.url | relative_url }}" target="_blank" rel="noopener">{{ l.name }}</a>
+      {%- endfor %}
+    </div>
+    {%- endif %}
+  </div>
+</article>

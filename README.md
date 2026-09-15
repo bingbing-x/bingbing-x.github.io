@@ -6,13 +6,13 @@
 
 **绝大多数情况下，你只需要改一个文件：[`_data/site.yml`](_data/site.yml)。**
 
-这个文件里放着主页的全部内容——个人信息、About、News、经历、论文、奖项、学术服务。
-HTML 模板会自动读取它并渲染。改完提交推送，GitHub Pages 约 1 分钟后自动生效，
-不需要在本地安装或构建任何东西。
+这个文件里放着主页的全部内容——个人信息、About、News、经历、论文、奖项、
+科研项目、学术服务。四个页面会自动读取它并渲染。改完提交推送，
+GitHub Pages 约 1 分钟后自动生效，不需要在本地安装或构建任何东西。
 
 ```bash
 git add _data/site.yml
-git commit -m "Add NeurIPS 2026 paper"
+git commit -m "Add NeurIPS 2027 paper"
 git push
 ```
 
@@ -24,8 +24,8 @@ git push
   - title: 论文标题
     url: https://arxiv.org/abs/xxxx.xxxxx    # 标题的跳转链接，可省略
     authors: "张三, **Bingbing Xu**, 李四"    # 用 ** ** 括住自己的名字
-    venue: NeurIPS 2026
-    year: 2026                                # 必填，决定分组
+    venue: NeurIPS 2027
+    year: 2027                                # 必填，决定分组
     type: C                                   # C=会议 J=期刊 P=预印本
     meta: New Orleans, USA; CCF-A             # 可省略
     links:                                    # 可省略
@@ -33,29 +33,50 @@ git push
         url: https://arxiv.org/abs/xxxx.xxxxx
       - name: Code
         url: https://github.com/...
-    image: my-paper-fig.png                   # 可省略，放在 static/uploads/covers/
-    tldr: 一句话说明这篇工作。                  # 可省略，填了才有 [Summary] 按钮
 ```
+
+### 让一篇论文出现在首页的「Selected Publications」
+
+首页只展示标了 `featured: true` 的论文，用大卡片形式（配图 + 会议徽章 + 一句话介绍）。
+完整列表在 Publications 页。
+
+```yaml
+    featured: true
+    badge: NeurIPS 2027                       # 卡片左上角的徽章
+    image: my-paper-fig.png                   # 配图，放在 static/uploads/covers/
+    tldr: 一句话说明这篇工作解决了什么问题。
+```
+
+**配图可以先不放。** 没有 `image` 时，卡片会自动显示一个印着会议名的排版块，
+不会出现破图。以后把图丢进 `static/uploads/covers/` 再填上文件名即可。
 
 ### 加一条 News
 
 ```yaml
 news:
-  - date: 2026-09
-    text: 'One paper accepted at <strong>NeurIPS 2026</strong>.'
+  - date: 2027-01
+    kind: paper                               # paper / award / talk / service / misc
+    text: 'One paper accepted at <strong>NeurIPS 2027</strong>.'
 ```
 
-超过 `news_limit` 条的会自动折叠，页面上出现"Show all"按钮。
+`kind` 决定时间线上标记点的颜色：论文青绿、获奖金色、学术服务紫色、其他灰色。
+首页只显示最新 5 条，完整列表在 News 页。
 
-### 换头像
+### 放头像
 
-把图片放进 `static/homepage/images/`，然后在 `_data/site.yml` 里填文件名：
+把照片放进 `static/homepage/images/`，然后在 `_data/site.yml` 里填文件名：
 
 ```yaml
   photo: avatar.jpg
 ```
 
-留空则不显示头像区域。
+留空时侧栏会显示姓名首字母的占位方块（当前就是这样）。
+建议用正方形照片，显示尺寸 132×132，实际传 400×400 以上即可。
+
+### 增删页面标签
+
+改 [`_data/nav.yml`](_data/nav.yml)。`url` 要和页面文件里 front matter 的
+`permalink` 保持一致。
 
 ### 开启访问统计
 
@@ -65,14 +86,26 @@ ID（形如 `G-XXXXXXXXXX`）即可启用。
 ## 目录结构
 
 ```
-_data/site.yml       ← 全部内容都在这里，日常只改这个
-_config.yml          站点配置（标题、URL）
-index.html           页面模板，决定内容怎么排版
-_layouts/default.html  HTML 外壳（head、主题切换按钮）
-_includes/icon.html  图标 SVG
-static/css/main.css  样式。改配色只需调文件开头的 CSS 变量
-static/js/main.js    交互（深色模式、折叠展开）
-static/uploads/      论文配图、slides、poster
+_data/site.yml          ← 全部内容都在这里，日常只改这个
+_data/nav.yml           顶部导航标签
+_config.yml             站点配置（标题、URL）
+
+index.html              首页：About + 代表作卡片 + 最新 News
+publications.html       完整论文列表，按年份分组
+news.html               完整 News 时间线
+cv.html                 经历 / 获奖 / 科研项目 / 学术服务
+
+_layouts/default.html   页面外壳：顶部导航 + 左侧资料栏
+_includes/
+  paper-card.html       代表作大卡片（首页用）
+  paper-row.html        论文列表条目（Publications 页用）
+  authors.html          作者串渲染，把 **名字** 变成加粗下划线
+  icon.html             图标 SVG
+
+static/css/main.css     样式。改配色只需调文件开头那组 CSS 变量
+static/js/main.js       深浅色主题切换
+static/uploads/covers/  论文配图
+static/uploads/pdfs/    slides、poster、video
 ```
 
 ## 本地预览（可选）
@@ -88,21 +121,18 @@ jekyll serve
 
 ## 内容来源
 
-个人信息（履历、奖项、科研项目）取自
-[ICT 官方个人主页](https://ict.cas.cn/sourcedb/cn/jssrck/202312/t20231201_6939367.html)，
-论文列表取自改版前的旧主页并与 ICT 页面核对过（旧主页 20 篇 + ICT 页面独有的
-《计算机学报》综述 1 篇 = 21 篇）。
-
-页面内容全部为英文。
+- 个人履历、奖项、科研项目：[ICT 官方个人主页](https://ict.cas.cn/sourcedb/cn/jssrck/202312/t20231201_6939367.html)
+- 论文列表：改版前的旧主页 + Google Scholar，已去重核对
+- 页面内容全部为英文
 
 ## 备注
 
 - `index.old.html` 是改版前的旧版单文件主页，留作参考，确认新版无误后可以删掉。
-  注意它依赖的旧 CSS 已随改版删除，所以直接打开会没有样式；旧版的完整可运行形态
-  保存在 git 历史的 `ef70d37` 提交里，需要时用 `git show ef70d37` 取回。
-- 以下模板遗留物已在改版中删除：`static/css/dist/`（96KB Tailwind 产物）、
+  注意它依赖的旧 CSS 已被删除，直接打开会没有样式；旧版完整可运行形态保存在
+  git 历史的 `ef70d37` 提交里，需要时用 `git show ef70d37` 取回。
+- 以下模板遗留物已删除：`static/css/dist/`（96KB Tailwind 产物）、
   `static/homepage/fonts/`（9.3MB 字体）、`static/homepage/images/yyg.jpg`（模板作者头像）。
-- `static/uploads/` 目前约 51MB，其中 41MB 是 AAAI 2024 那篇的 poster/slides/video
-  （主页上有链接指向，需要保留）。另有两类文件未被引用，可考虑清理：
+- `static/uploads/` 约 51MB，其中 41MB 是 AAAI 2024 那篇的 poster/slides/video
+  （页面有链接指向，需要保留）。另有两类未被引用、可考虑清理：
   `neurips2023-augselfgan-*`（6.6MB，模板作者论文的材料）和三个 `*-pic.pdf`
   （约 5MB，配图的 PDF 版，页面用的是 .png 版）。

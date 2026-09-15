@@ -1,0 +1,29 @@
+---
+layout: default
+title: Publications
+permalink: /publications/
+---
+{%- assign d = site.data.site -%}
+
+<section>
+  <h2>Publications</h2>
+  <p class="lede">
+    {{ d.publications.size }} papers.
+    <span class="legend"><span class="kind kind-c">C</span> conference</span>
+    <span class="legend"><span class="kind kind-j">J</span> journal</span>
+    <span class="legend"><span class="kind kind-p">P</span> preprint</span>
+  </p>
+
+  {%- assign by_year = d.publications | group_by: "year" | sort: "name" | reverse %}
+
+  <nav class="years">
+    {%- for g in by_year %}<a href="#y{{ g.name }}">{{ g.name }}</a>{% endfor %}
+  </nav>
+
+  {%- for g in by_year %}
+  <h3 class="year" id="y{{ g.name }}">{{ g.name }}<span class="year-count">{{ g.items.size }}</span></h3>
+  {%- for pub in g.items %}
+  {% include paper-row.html pub=pub %}
+  {%- endfor %}
+  {%- endfor %}
+</section>

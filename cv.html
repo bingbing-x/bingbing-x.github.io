@@ -1,0 +1,65 @@
+---
+layout: default
+title: CV
+permalink: /cv/
+---
+{%- assign d = site.data.site -%}
+
+{%- if d.experience and d.experience.size > 0 %}
+<section>
+  <h2>Experience</h2>
+  <ul class="track">
+    {%- for e in d.experience %}
+    <li>
+      <div class="track-head">
+        <span class="track-role">{{ e.role }}</span>
+        {%- if e.date %}<span class="track-date">{{ e.date }}</span>{% endif %}
+      </div>
+      <div class="track-org">{{ e.org }}{% if e.place %} &middot; {{ e.place }}{% endif %}</div>
+      {%- if e.note and e.note != '' %}<div class="track-note">{{ e.note }}</div>{% endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+{%- if d.awards and d.awards.size > 0 %}
+<section>
+  <h2>Awards &amp; Honors</h2>
+  <ul class="plain">
+    {%- for a in d.awards %}
+    <li><span>{{ a.text }}</span>{% if a.date %}<span class="plain-date">{{ a.date }}</span>{% endif %}</li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+{%- if d.grants and d.grants.size > 0 %}
+<section>
+  <h2>Research Grants</h2>
+  <ul class="track">
+    {%- for g in d.grants %}
+    <li>
+      <div class="track-head">
+        <span class="track-role">{{ g.text }}</span>
+        {%- if g.date %}<span class="track-date">{{ g.date }}</span>{% endif %}
+      </div>
+      <div class="track-org">{{ g.funder }}</div>
+      {%- if g.role and g.role != '' %}<div class="track-note">{{ g.role }}</div>{% endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+{%- if d.services and d.services.size > 0 %}
+<section>
+  <h2>Academic Services</h2>
+  <dl class="defs">
+    {%- for s in d.services %}
+    <dt>{{ s.label }}</dt>
+    <dd>{{ s.text }}</dd>
+    {%- endfor %}
+  </dl>
+</section>
+{%- endif %}

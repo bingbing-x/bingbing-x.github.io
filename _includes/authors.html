@@ -1,0 +1,9 @@
+{%- comment -%}
+  渲染作者串：**Name** 会变成加粗下划线。
+  用法：{% include authors.html s=pub.authors %}
+{%- endcomment -%}
+{%- assign segs = include.s | split: '**' -%}
+{%- for seg in segs -%}
+{%- assign odd = forloop.index0 | modulo: 2 -%}
+{%- if odd == 1 -%}<span class="me">{{ seg }}</span>{%- else -%}{{ seg }}{%- endif -%}
+{%- endfor -%}

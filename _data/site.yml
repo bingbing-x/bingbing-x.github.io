@@ -47,6 +47,11 @@ about: >
   Technology, Chinese Academy of Sciences (ICT, CAS), where I also serve as a
   master's supervisor.
 
+  From August 2025 to August 2026 I was a visiting scholar at the
+  <a href="https://www.nextcenter.org/">NExT++ Research Centre</a>,
+  National University of Singapore, hosted by
+  <a href="https://www.chuatatseng.com/">Prof. Tat-Seng Chua</a>.
+
   I received my Ph.D. from ICT, CAS in 2021 under the supervision of
   <a href="https://scholar.google.com/citations?user=hY8aLqAAAAAJ">Prof. Xueqi Cheng</a>
   and
@@ -70,31 +75,79 @@ prospective_students: >
   If you are interested, please feel free to contact me at any time.
 
 # ---------- News ----------
-# 最新的放最上面；超过 news_limit 条会折叠，点击展开
-news_limit: 5
-# TODO 下面是我根据你的论文与履历整理的，请核对措辞和月份
+# 最新的放最上面；超过 news_limit 条会折叠，点击展开。
+# kind 决定左侧标记的颜色与图标：
+#   paper（论文录用）/ award（获奖）/ talk（报告）/ service（学术服务）/ misc（其他）
+news_limit: 6
+# TODO 下面是我根据你的论文、履历与获奖整理的，请核对措辞与月份
 news:
-  - date: 2026
-    text: 'Five papers accepted at <strong>ACL 2026</strong> (3 Main, 2 Findings).'
-  - date: 2026
-    text: 'One paper accepted at <strong>NeurIPS 2026</strong>: Inference-Time Alignment in Continuous Space.'
-  - date: 2026
-    text: 'One paper accepted at <strong>EACL 2026</strong> and one at <strong>WSDM 2026</strong>.'
-  - date: 2025
+  - date: 2026-08
+    kind: misc
+    text: >
+      Completed my one-year visiting scholarship at the
+      <a href="https://www.nextcenter.org/">NExT++ Centre</a>, National University of Singapore.
+  - date: 2026-05
+    kind: paper
+    text: >
+      Five papers accepted at <strong>ACL 2026</strong> — three in the Main Conference
+      (Chain-of-Memory, Learning from Mistakes, HAG) and two in Findings
+      (ROMA, Rethinking Agentic Workflow Generation).
+  - date: 2026-01
+    kind: paper
+    text: >
+      Our paper <a href="https://arxiv.org/abs/2601.04992">Learning from Mistakes</a>
+      and several new preprints on LLM reasoning and agents are now on arXiv.
+  - date: 2025-12
+    kind: paper
+    text: >
+      One paper accepted at <strong>WSDM 2026</strong>: Multi-Personality Generation
+      of LLMs at Decoding-Time.
+  - date: 2025-09
+    kind: paper
+    text: >
+      One paper accepted at <strong>NeurIPS 2026</strong>:
+      Inference-Time Alignment in Continuous Space.
+  - date: 2025-08
+    kind: misc
+    text: >
+      Started a one-year visit at the <a href="https://www.nextcenter.org/">NExT++ Centre</a>,
+      National University of Singapore, hosted by
+      <a href="https://www.chuatatseng.com/">Prof. Tat-Seng Chua</a>.
+  - date: 2025-07
+    kind: service
+    text: >
+      Co-organized the <strong>1st Workshop on LLM Agents for Social Simulation</strong>
+      at CIKM 2025 in Seoul, Korea.
+  - date: 2025-04
+    kind: paper
     text: 'Two papers accepted at <strong>SIGIR 2025</strong> and one at <strong>ACM MM 2025</strong>.'
-  - date: 2025
-    text: 'Co-organized the <strong>1st Workshop on LLM Agents for Social Simulation</strong> at CIKM 2025.'
+  - date: 2025-02
+    kind: award
+    text: >
+      Our team won <strong>first place</strong> in the
+      <a href="https://tsinghua-fib-lab.github.io/AgentSocietyChallenge">AgentSociety Challenge</a>
+      at <strong>WWW 2025</strong>.
   - date: 2024-05
+    kind: paper
     text: 'One paper accepted at <strong>SIGIR 2024</strong>: Negative as Positive.'
   - date: 2024-02
+    kind: paper
     text: 'Two papers accepted at <strong>CVPR 2024</strong> and <strong>AAAI 2024</strong>.'
   - date: 2023-09
+    kind: misc
     text: 'Started as <strong>Associate Professor</strong> at ICT, CAS.'
   - date: 2023-01
+    kind: award
     text: 'Received the <strong>NSFC Young Scientists Fund</strong> as Principal Investigator.'
 
 # ---------- 教育与工作经历 ----------
 experience:
+  - role: Visiting Scholar
+    org: NExT++ Research Centre, National University of Singapore
+    place: Singapore
+    date: Aug. 2025 - Aug. 2026
+    note: >
+      Host: <a href="https://www.chuatatseng.com/">Prof. Tat-Seng Chua</a>
   - role: Associate Professor
     org: Institute of Computing Technology, Chinese Academy of Sciences
     place: Beijing, China
@@ -133,12 +186,18 @@ experience:
 publications:
   # ===== 2025 =====
   - title: "InfoNCE is a Free Lunch for Semantically Guided Graph Contrastive Learning"
+    featured: true
+    badge: SIGIR 2025
     authors: "Zixu Wang, **Bingbing Xu**, Yige Yuan, Huawei Shen, Xueqi Cheng"
     venue: 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2025)
     year: 2025
     type: C
     meta: CCF-A
 
+    tldr: >
+      We show that InfoNCE alone, with proper semantic guidance, is sufficient 
+      for graph contrastive learning — no extra objective or heavy 
+      augmentation needed.
   - title: Fact-Level Calibration and Correction for Long-Form Generations
     authors: "Yige Yuan, **Bingbing Xu**, Hexiang Tan, Fei Sun, Teng Xiao, Wei Li, Huawei Shen, Xueqi Cheng"
     venue: 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2025)
@@ -173,12 +232,18 @@ publications:
         url: https://arxiv.org/abs/2601.10323
 
   - title: "Chain-of-Memory: Lightweight Memory Construction with Dynamic Evolution for LLM Agents"
+    featured: true
+    badge: ACL 2026
     authors: "Xingchen Xu, **Bingbing Xu**, Xueyun Tian, Zhaochen Huang, Rui Chen, Yunfan Lu, Huawei Shen"
     venue: 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026)
     year: 2026
     type: C
     meta: Main Track; CCF-A
 
+    tldr: >
+      A lightweight memory construction mechanism with dynamic evolution, 
+      giving LLM agents persistent and continually refined memory at low 
+      overhead.
   - title: "Do We Always Need Query-Level Workflows? Rethinking Agentic Workflow Generation for Multi-Agent Systems"
     authors: "Zixu Wang, **Bingbing Xu**, Yige Yuan, Huawei Shen, Xueqi Cheng"
     venue: "Findings of the Association for Computational Linguistics: ACL 2026, pp. 5149-5165"
@@ -205,19 +270,31 @@ publications:
     meta: Main Track; CCF-A
 
   - title: Inference-Time Alignment in Continuous Space
+    featured: true
+    badge: NeurIPS 2026
     authors: "Yige Yuan, Teng Xiao, Yunfan Lu, **Bingbing Xu**, Shuchang Tao, Yunqi Qiu, Huawei Shen, Xueqi Cheng"
     venue: Advances in Neural Information Processing Systems 38 (NeurIPS 2026), pp. 152837-152867
     year: 2026
     type: C
     meta: CCF-A
 
+    tldr: >
+      We reformulate alignment as an iterative optimization over an energy 
+      function on logits in continuous space, defined by the optimal RLHF 
+      policy — achieving deep alignment without retraining.
   - title: Incentivizing Strong Reasoning from Weak Supervision
+    featured: true
+    badge: EACL 2026
     authors: "Yige Yuan, Teng Xiao, Shuchang Tao, Xue Wang, Jinbo Gao, Bolin Ding, **Bingbing Xu**"
     venue: 19th Conference of the European Chapter of the Association for Computational Linguistics (EACL 2026)
     year: 2026
     type: C
     meta: CCF-B
 
+    tldr: >
+      We show that a weak teacher — far smaller and less performant than the 
+      student — can substantially boost student reasoning, without expert 
+      supervision or costly RL.
   - title: Multi-Personality Generation of LLMs at Decoding-Time
     authors: "Rui Chen, Yang Li, Yige Yuan, **Bingbing Xu**, Huawei Shen"
     venue: 19th ACM International Conference on Web Search and Data Mining (WSDM 2026)
@@ -501,6 +578,8 @@ publications:
         url: https://www.sciencedirect.com/science/article/abs/pii/S0893608022003008
 
   - title: "Company-as-Tribe: Company Financial Risk Assessment on Tribe-Style Graph with Hierarchical Graph Neural Networks"
+    featured: true
+    badge: KDD 2022
     url: https://arxiv.org/abs/2301.13492
     authors: "Wendong Bi, **Bingbing Xu**, Xiaoqian Sun, Li Xu, Huawei Shen, Xueqi Cheng"
     venue: KDD 2022
@@ -512,7 +591,12 @@ publications:
       - name: Code
         url: https://github.com/wendongbi/TH-GNN
 
+    tldr: >
+      We model company financial risk on tribe-style graphs with hierarchical 
+      GNNs, capturing both intra-tribe and inter-tribe risk propagation.
   - title: "Towards Consumer Loan Fraud Detection: Graph Neural Networks with Role-Constrained Conditional Random Field"
+    featured: true
+    badge: AAAI 2021
     url: https://cdn.aaai.org/ojs/16582/16582-13-20076-1-2-20210518.pdf
     authors: "**Bingbing Xu**, Huawei Shen, Bingjie Sun, Rong An, Qi Cao, Xueqi Cheng"
     venue: AAAI 2021
@@ -522,6 +606,10 @@ publications:
       - name: Paper
         url: https://cdn.aaai.org/ojs/16582/16582-13-20076-1-2-20210518.pdf
 
+    tldr: >
+      We inject role-constrained conditional random fields into GNNs to model 
+      the distinct roles participants play in loan fraud, improving detection 
+      on real financial networks.
   - title: Label-Consistency Based Graph Neural Networks for Semi-Supervised Node Classification
     url: https://arxiv.org/abs/2007.13435
     authors: "**Bingbing Xu**, Junjie Huang, Liang Hou, Huawei Shen, Jinhua Gao, Xueqi Cheng"
@@ -535,6 +623,8 @@ publications:
         url: https://github.com/Eilene/LCGNN
 
   - title: Graph Convolutional Networks Using Heat Kernel for Semi-Supervised Learning
+    featured: true
+    badge: IJCAI 2019
     url: http://www.arxiv.org/abs/2007.16002
     authors: "**Bingbing Xu**, Huawei Shen, Qi Cao, Keting Cen, Xueqi Cheng"
     venue: IJCAI 2019
@@ -546,7 +636,13 @@ publications:
       - name: Code
         url: https://github.com/Eilene/GraphHeat
 
+    tldr: >
+      GraphHeat uses the heat kernel to enhance low-frequency filters and 
+      enforce smoothness in signal variation, letting the model capture 
+      low-order neighborhood structure more effectively.
   - title: Graph Wavelet Neural Network
+    featured: true
+    badge: ICLR 2019
     url: https://arxiv.org/abs/1904.07785
     authors: "**Bingbing Xu**, Huawei Shen, Qi Cao, Yunqi Qiu, Xueqi Cheng"
     venue: ICLR 2019
@@ -557,10 +653,20 @@ publications:
         url: https://arxiv.org/abs/1904.07785
       - name: Code
         url: https://github.com/Eilene/GWNN
+    tldr: >
+      We replace the graph Fourier basis with graph wavelets, which are 
+      sparse, localized in vertex domain, and free of matrix 
+      eigendecomposition — giving GCNs both efficiency and interpretable 
+      locality.
 
 # ---------- 奖项荣誉 ----------
 # 来源：ICT 个人主页
 awards:
+  - text: >
+      <strong>First Place</strong>,
+      <a href="https://tsinghua-fib-lab.github.io/AgentSocietyChallenge">AgentSociety Challenge</a>
+      @ WWW 2025
+    date: "2025"
   - text: Outstanding Researcher, Institute of Computing Technology, CAS
     date: "2022"
   - text: '"New Hundred Stars" Program, Institute of Computing Technology, CAS'
@@ -597,5 +703,5 @@ services:
     text: Neural Networks, IEEE Transactions on Computational Social Systems, Information Processing and Management, PLOS ONE
 
 # ---------- 页脚 ----------
-# 留空则自动显示构建日期
+# 页脚显示的「最后更新」。留空则自动显示构建日期（英文月份格式）。
 last_update:

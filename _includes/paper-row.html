@@ -1,0 +1,24 @@
+{%- comment -%}
+  紧凑列表条目，用于完整论文列表。
+  用法：{% include paper-row.html pub=pub %}
+{%- endcomment -%}
+{%- assign pub = include.pub -%}
+<article class="row">
+  <p class="row-title">
+    {%- if pub.url %}<a href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+    {%- else %}{{ pub.title }}{% endif -%}
+  </p>
+  <p class="row-authors">{% include authors.html s=pub.authors %}</p>
+  <p class="row-venue">
+    {%- if pub.type %}<span class="kind kind-{{ pub.type | downcase }}">{{ pub.type }}</span>{% endif -%}
+    {{ pub.venue }}
+    {%- if pub.meta and pub.meta != '' %}<span class="row-meta"> &middot; {{ pub.meta }}</span>{% endif -%}
+  </p>
+  {%- if pub.links.size > 0 %}
+  <div class="row-links">
+    {%- for l in pub.links %}
+    <a href="{{ l.url | relative_url }}" target="_blank" rel="noopener">{{ l.name }}</a>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+</article>

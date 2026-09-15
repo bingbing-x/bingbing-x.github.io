@@ -1,0 +1,10 @@
+# 顶部导航。改这里就能增删页面标签。
+# url 要与各页面 front matter 里的 permalink 一致。
+- name: Home
+  url: /
+- name: Publications
+  url: /publications/
+- name: News
+  url: /news/
+- name: CV
+  url: /cv/
