@@ -145,11 +145,11 @@ publications:
       - name: Code
         url: https://github.com/yuanyige/pde-add
       - name: Poster
-        url: ./static/uploads/pdfs/aaai2024-pdeadd-poster.pdf
+        url: /static/uploads/pdfs/aaai2024-pdeadd-poster.pdf
       - name: Slides
-        url: ./static/uploads/pdfs/aaai2024-pdeadd-slides.pdf
+        url: /static/uploads/pdfs/aaai2024-pdeadd-slides.pdf
       - name: Video
-        url: ./static/uploads/pdfs/aaai2024-pdeadd-video.mp4
+        url: /static/uploads/pdfs/aaai2024-pdeadd-video.mp4
     image: aaai2024-pdeadd-pic.png
     tldr: >
       Investigates generalization from a PDE perspective, introducing adaptive
