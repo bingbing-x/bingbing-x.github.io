@@ -89,5 +89,11 @@ jekyll serve
 ## 备注
 
 - `index.old.html` 是改版前的旧版单文件主页，留作参考，确认新版无误后可以删掉。
-- `static/css/dist/styles.css`（96KB 的 Tailwind 产物）和 `static/homepage/fonts/`
-  （9.3MB 字体）是旧版遗留，新版不再使用，确认无误后可一并删除以精简仓库。
+  注意它依赖的旧 CSS 已随改版删除，所以直接打开会没有样式；旧版的完整可运行形态
+  保存在 git 历史的 `ef70d37` 提交里，需要时用 `git show ef70d37` 取回。
+- 以下模板遗留物已在改版中删除：`static/css/dist/`（96KB Tailwind 产物）、
+  `static/homepage/fonts/`（9.3MB 字体）、`static/homepage/images/yyg.jpg`（模板作者头像）。
+- `static/uploads/` 目前约 51MB，其中 41MB 是 AAAI 2024 那篇的 poster/slides/video
+  （主页上有链接指向，需要保留）。另有两类文件未被引用，可考虑清理：
+  `neurips2023-augselfgan-*`（6.6MB，模板作者论文的材料）和三个 `*-pic.pdf`
+  （约 5MB，配图的 PDF 版，页面用的是 .png 版）。
