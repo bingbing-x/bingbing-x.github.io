@@ -121,6 +121,117 @@ experience:
 #   image   可选，示意图文件名，放在 static/uploads/covers/ 下
 #   tldr    可选，一句话总结；填了才会出现 [Summary] 按钮
 publications:
+  # ===== 2025 =====
+  - title: "InfoNCE is a Free Lunch for Semantically Guided Graph Contrastive Learning"
+    authors: "Zixu Wang, **Bingbing Xu**, Yige Yuan, Huawei Shen, Xueqi Cheng"
+    venue: 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2025)
+    year: 2025
+    type: C
+    meta: CCF-A
+
+  - title: Fact-Level Calibration and Correction for Long-Form Generations
+    authors: "Yige Yuan, **Bingbing Xu**, Hexiang Tan, Fei Sun, Teng Xiao, Wei Li, Huawei Shen, Xueqi Cheng"
+    venue: 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2025)
+    year: 2025
+    type: C
+    meta: CCF-A
+
+  - title: "MIGE: Mutually Enhanced Multimodal Instruction-Based Image Generation and Editing"
+    authors: "Xueyun Tian, Wei Li, **Bingbing Xu**, Yige Yuan, Yuanzhuo Wang, Huawei Shen"
+    venue: 33rd ACM International Conference on Multimedia (MM 2025), pp. 10622-10631
+    year: 2025
+    type: C
+    meta: CCF-A
+
+  - title: The 1st Workshop on LLM Agents for Social Simulation
+    authors: "Yige Yuan, Jie Zhou, **Bingbing Xu**, Liang Pang, Dan Su, An Zhang, Teng Xiao, Fei Xu, Zhaochun Ren, et al."
+    venue: 34th ACM International Conference on Information and Knowledge Management (CIKM 2025)
+    year: 2025
+    type: C
+    meta: Workshop
+
+  # TODO 以下 12 篇来自你提供的列表。发表年份/会议我暂按 2025 归类（请核对），
+  # 完整作者列表因论文数据库（arXiv / Semantic Scholar / DBLP）当时均限流未能查到，
+  # 现按 "**Bingbing Xu**, et al." 占位 —— 请补全作者、venue、year 和链接。
+  - title: "ROMA: Real-time Omni-Multimodal Assistant with Interactive Streaming Understanding"
+    authors: "**Bingbing Xu**, et al."
+    venue: Preprint          # TODO
+    year: 2025               # TODO
+    type: P
+
+  - title: "Chain-of-Memory: Lightweight Memory Construction with Dynamic Evolution for LLM Agents"
+    authors: "**Bingbing Xu**, et al."
+    venue: Preprint          # TODO
+    year: 2025               # TODO
+    type: P
+
+  - title: "Do We Always Need Query-Level Workflows? Rethinking Agentic Workflow Generation for Multi-Agent Systems"
+    authors: "**Bingbing Xu**, et al."
+    venue: Preprint          # TODO
+    year: 2025               # TODO
+    type: P
+
+  - title: "Learning from Mistakes: Negative Reasoning Samples Enhance Out-of-Domain Generalization"
+    authors: "**Bingbing Xu**, et al."
+    venue: Preprint          # TODO
+    year: 2025               # TODO
+    type: P
+
+  - title: "HAG: Hierarchical Demographic Tree-based Agent Generation for Topic-Adaptive Simulation"
+    authors: "**Bingbing Xu**, et al."
+    venue: Preprint          # TODO
+    year: 2025               # TODO
+    type: P
+
+  - title: Inference-Time Alignment in Continuous Space
+    authors: "**Bingbing Xu**, et al."
+    venue: Preprint          # TODO
+    year: 2025               # TODO
+    type: P
+
+  - title: Incentivizing Strong Reasoning from Weak Supervision
+    authors: "**Bingbing Xu**, et al."
+    venue: Preprint          # TODO
+    year: 2025               # TODO
+    type: P
+
+  - title: Multi-Personality Generation of LLMs at Decoding-Time
+    authors: "**Bingbing Xu**, et al."
+    venue: Preprint          # TODO
+    year: 2025               # TODO
+    type: P
+
+  - title: Towards Robust Process Reward Modeling via Noise-Aware Learning
+    authors: "**Bingbing Xu**, et al."
+    venue: Preprint          # TODO
+    year: 2025               # TODO
+    type: P
+
+  - title: "ACE-Align: Attribute Causal Effect Alignment for Cultural Values under Varying Persona Granularities"
+    authors: "**Bingbing Xu**, et al."
+    venue: Preprint          # TODO
+    year: 2025               # TODO
+    type: P
+
+  - title: "RPO: Decoupling Training Trajectories from Inference Responses for LLM Reasoning"
+    authors: "**Bingbing Xu**, et al."
+    venue: Preprint          # TODO
+    year: 2025               # TODO
+    type: P
+
+  - title: "GIFT: Games as Informal Training for Generalizable LLMs"
+    authors: "**Bingbing Xu**, et al."
+    venue: Preprint          # TODO
+    year: 2025               # TODO
+    type: P
+
+  - title: "From Outcomes to Processes: Guiding PRM Learning from ORM for Inference-Time Alignment"
+    authors: "**Bingbing Xu**, et al."
+    venue: Preprint          # TODO
+    year: 2025               # TODO
+    type: P
+
+  # ===== 2024 =====
   - title: "Negative as Positive: Enhancing Out-of-distribution Generalization for Graph Contrastive Learning"
     url: https://arxiv.org/pdf/2405.16224
     authors: "Zixu Wang, **Bingbing Xu**, Yige Yuan, Huawei Shen, Xueqi Cheng"
