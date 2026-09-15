@@ -30,7 +30,8 @@ profile:
       icon: link
       url: https://ict.cas.cn/sourcedb/cn/jssrck/202312/t20231201_6939367.html
   interests:
-    - Graph Foundation Model
+    - Large Language Models
+    - LLM Agents
     - Graph Neural Networks
     - Social Computing
 
@@ -52,11 +53,14 @@ about: >
   <a href="http://www.ict.ac.cn/sourcedb/cn/jssrck/201402/t20140221_4037648.html">Prof. Huawei Shen</a>,
   and received my B.S. from Harbin Institute of Technology (Weihai) in 2016.
 
-  My research centers on graph representation learning — from spectral graph
-  neural networks such as
-  <a href="https://arxiv.org/abs/1904.07785">Graph Wavelet Neural Network</a>
-  to graph foundation models — and its applications in financial risk control
-  and social computing.
+  My earlier work centers on graph representation learning, including spectral
+  graph neural networks such as
+  <a href="https://arxiv.org/abs/1904.07785">Graph Wavelet Neural Network</a>,
+  with applications in financial risk control and social computing.
+
+  My current research focuses on large language models and LLM agents —
+  inference-time alignment, process reward modeling, memory and planning for
+  agents, and multi-agent social simulation.
 
 # 招生信息。不需要就整段删掉（或写成 prospective_students:）
 prospective_students: >
@@ -68,18 +72,24 @@ prospective_students: >
 # ---------- News ----------
 # 最新的放最上面；超过 news_limit 条会折叠，点击展开
 news_limit: 5
-# TODO 下面是我根据你的论文和履历整理的，请核对；最新动态（2025 至今）请自行补充
+# TODO 下面是我根据你的论文与履历整理的，请核对措辞和月份
 news:
+  - date: 2026
+    text: 'Five papers accepted at <strong>ACL 2026</strong> (3 Main, 2 Findings).'
+  - date: 2026
+    text: 'One paper accepted at <strong>NeurIPS 2026</strong>: Inference-Time Alignment in Continuous Space.'
+  - date: 2026
+    text: 'One paper accepted at <strong>EACL 2026</strong> and one at <strong>WSDM 2026</strong>.'
+  - date: 2025
+    text: 'Two papers accepted at <strong>SIGIR 2025</strong> and one at <strong>ACM MM 2025</strong>.'
+  - date: 2025
+    text: 'Co-organized the <strong>1st Workshop on LLM Agents for Social Simulation</strong> at CIKM 2025.'
   - date: 2024-05
     text: 'One paper accepted at <strong>SIGIR 2024</strong>: Negative as Positive.'
   - date: 2024-02
     text: 'Two papers accepted at <strong>CVPR 2024</strong> and <strong>AAAI 2024</strong>.'
   - date: 2023-09
     text: 'Started as <strong>Associate Professor</strong> at ICT, CAS.'
-  - date: 2023-08
-    text: 'Two papers accepted at <strong>CIKM 2023</strong>.'
-  - date: 2023-05
-    text: 'Two papers accepted at <strong>KDD 2023</strong>.'
   - date: 2023-01
     text: 'Received the <strong>NSFC Young Scientists Fund</strong> as Principal Investigator.'
 
@@ -150,87 +160,154 @@ publications:
     type: C
     meta: Workshop
 
-  # TODO 以下 12 篇来自你提供的列表。发表年份/会议我暂按 2025 归类（请核对），
-  # 完整作者列表因论文数据库（arXiv / Semantic Scholar / DBLP）当时均限流未能查到，
-  # 现按 "**Bingbing Xu**, et al." 占位 —— 请补全作者、venue、year 和链接。
+  # ===== 2026 =====
   - title: "ROMA: Real-time Omni-Multimodal Assistant with Interactive Streaming Understanding"
-    authors: "**Bingbing Xu**, et al."
-    venue: Preprint          # TODO
-    year: 2025               # TODO
-    type: P
+    url: https://arxiv.org/abs/2601.10323
+    authors: "Xueyun Tian, Wei Li, **Bingbing Xu**, Hanyu Dong, Yuanzhuo Wang, Huawei Shen"
+    venue: "Findings of the Association for Computational Linguistics: ACL 2026, pp. 23018-23039"
+    year: 2026
+    type: C
+    meta: CCF-A
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2601.10323
 
   - title: "Chain-of-Memory: Lightweight Memory Construction with Dynamic Evolution for LLM Agents"
-    authors: "**Bingbing Xu**, et al."
-    venue: Preprint          # TODO
-    year: 2025               # TODO
-    type: P
+    authors: "Xingchen Xu, **Bingbing Xu**, Xueyun Tian, Zhaochen Huang, Rui Chen, Yunfan Lu, Huawei Shen"
+    venue: 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026)
+    year: 2026
+    type: C
+    meta: Main Track; CCF-A
 
   - title: "Do We Always Need Query-Level Workflows? Rethinking Agentic Workflow Generation for Multi-Agent Systems"
-    authors: "**Bingbing Xu**, et al."
-    venue: Preprint          # TODO
-    year: 2025               # TODO
-    type: P
+    authors: "Zixu Wang, **Bingbing Xu**, Yige Yuan, Huawei Shen, Xueqi Cheng"
+    venue: "Findings of the Association for Computational Linguistics: ACL 2026, pp. 5149-5165"
+    year: 2026
+    type: C
+    meta: CCF-A
 
   - title: "Learning from Mistakes: Negative Reasoning Samples Enhance Out-of-Domain Generalization"
-    authors: "**Bingbing Xu**, et al."
-    venue: Preprint          # TODO
-    year: 2025               # TODO
-    type: P
+    url: https://arxiv.org/abs/2601.04992
+    authors: "Xueyun Tian, Minghao Ma, **Bingbing Xu**, Nuoyan Lyu, Wei Li, Hanyu Dong, Zhendong Chu, Yuanzhuo Wang, Huawei Shen"
+    venue: 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026)
+    year: 2026
+    type: C
+    meta: Main Track; CCF-A
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2601.04992
 
   - title: "HAG: Hierarchical Demographic Tree-based Agent Generation for Topic-Adaptive Simulation"
-    authors: "**Bingbing Xu**, et al."
-    venue: Preprint          # TODO
-    year: 2025               # TODO
-    type: P
+    authors: "Rui Chen, Tong Wu, **Bingbing Xu**, Jiawei Luo, Xingchen Xu, Huawei Shen"
+    venue: 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026)
+    year: 2026
+    type: C
+    meta: Main Track; CCF-A
 
   - title: Inference-Time Alignment in Continuous Space
-    authors: "**Bingbing Xu**, et al."
-    venue: Preprint          # TODO
-    year: 2025               # TODO
-    type: P
+    authors: "Yige Yuan, Teng Xiao, Yunfan Lu, **Bingbing Xu**, Shuchang Tao, Yunqi Qiu, Huawei Shen, Xueqi Cheng"
+    venue: Advances in Neural Information Processing Systems 38 (NeurIPS 2026), pp. 152837-152867
+    year: 2026
+    type: C
+    meta: CCF-A
 
   - title: Incentivizing Strong Reasoning from Weak Supervision
-    authors: "**Bingbing Xu**, et al."
-    venue: Preprint          # TODO
-    year: 2025               # TODO
-    type: P
+    authors: "Yige Yuan, Teng Xiao, Shuchang Tao, Xue Wang, Jinbo Gao, Bolin Ding, **Bingbing Xu**"
+    venue: 19th Conference of the European Chapter of the Association for Computational Linguistics (EACL 2026)
+    year: 2026
+    type: C
+    meta: CCF-B
 
   - title: Multi-Personality Generation of LLMs at Decoding-Time
-    authors: "**Bingbing Xu**, et al."
-    venue: Preprint          # TODO
-    year: 2025               # TODO
+    authors: "Rui Chen, Yang Li, Yige Yuan, **Bingbing Xu**, Huawei Shen"
+    venue: 19th ACM International Conference on Web Search and Data Mining (WSDM 2026)
+    year: 2026
+    type: C
+    meta: CCF-B
+
+  - title: "HetDualCL: Dual-Encoder Contrastive Learning for Heterogeneous Graphs"
+    authors: "Yang Li, Jianhua Chai, Wenjie Zhang, Chao Li, Xiang Zhao, **Bingbing Xu**, Shichao Zhang"
+    venue: Neural Networks, Article 109205
+    year: 2026
+    type: J
+    meta: Elsevier; CCF-B, SCI-I
+
+  - title: "Know You Before You Speak: User-State Modeling for LLM Personalization in Multi-Turn Conversation"
+    url: https://arxiv.org/abs/2605.24647
+    authors: "Jiawei Luo, Xiang Zhao, Yi Zhang, Shuai Miao, **Bingbing Xu**, Stefan Konigorski, Tat-Seng Chua"
+    venue: arXiv preprint arXiv:2605.24647
+    year: 2026
     type: P
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2605.24647
+
+  - title: "Towards Knowledgeable Deep Research: Framework and Benchmark"
+    url: https://arxiv.org/abs/2604.07720
+    authors: "Wenjun Liu, Zhen Li, Lei Bai, Chao Zhang, Fan Zhang, Zhi Chen, Wei Li, Yuan Zuo, Fei Wang, **Bingbing Xu**, et al."
+    venue: arXiv preprint arXiv:2604.07720
+    year: 2026
+    type: P
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2604.07720
 
   - title: Towards Robust Process Reward Modeling via Noise-Aware Learning
-    authors: "**Bingbing Xu**, et al."
-    venue: Preprint          # TODO
-    year: 2025               # TODO
+    url: https://arxiv.org/abs/2601.12748
+    authors: "Bin Xie, **Bingbing Xu**, Xueyun Tian, Yi Chen, Huawei Shen"
+    venue: arXiv preprint arXiv:2601.12748
+    year: 2026
     type: P
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2601.12748
 
   - title: "ACE-Align: Attribute Causal Effect Alignment for Cultural Values under Varying Persona Granularities"
-    authors: "**Bingbing Xu**, et al."
-    venue: Preprint          # TODO
-    year: 2025               # TODO
+    url: https://arxiv.org/abs/2601.12962
+    authors: "Jiawei Luo, **Bingbing Xu**, Rui Chen, Xiang Zhao, Yi Zhang, Liang Pang, Zhaochen Huang, Tat-Seng Chua, et al."
+    venue: arXiv preprint arXiv:2601.12962
+    year: 2026
     type: P
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2601.12962
 
   - title: "RPO: Decoupling Training Trajectories from Inference Responses for LLM Reasoning"
-    authors: "**Bingbing Xu**, et al."
-    venue: Preprint          # TODO
-    year: 2025               # TODO
+    url: https://arxiv.org/abs/2601.11960
+    authors: "Jinsheng Wang, **Bingbing Xu**, Yige Yuan, Bin Xie, Xiaoqian Sun, Huawei Shen"
+    venue: arXiv preprint arXiv:2601.11960
+    year: 2026
     type: P
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2601.11960
+
+  - title: "Beyond Entangled Planning: Task-Decoupled Planning for Long-Horizon Agents"
+    url: https://arxiv.org/abs/2601.07577
+    authors: "Yang Li, **Bingbing Xu**, Xueyun Tian, Xingchen Xu, Huawei Shen"
+    venue: arXiv preprint arXiv:2601.07577
+    year: 2026
+    type: P
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2601.07577
 
   - title: "GIFT: Games as Informal Training for Generalizable LLMs"
-    authors: "**Bingbing Xu**, et al."
-    venue: Preprint          # TODO
-    year: 2025               # TODO
+    url: https://arxiv.org/abs/2601.05633
+    authors: "Nuoyan Lyu, **Bingbing Xu**, Xueyun Tian, Wen Meng, Yige Yuan, Yi Zhang, Zhaochen Huang, Tat-Seng Chua, et al."
+    venue: arXiv preprint arXiv:2601.05633
+    year: 2026
     type: P
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2601.05633
 
   - title: "From Outcomes to Processes: Guiding PRM Learning from ORM for Inference-Time Alignment"
+    # TODO Scholar 列表中这篇未给出作者与发表信息，请补充
     authors: "**Bingbing Xu**, et al."
-    venue: Preprint          # TODO
-    year: 2025               # TODO
+    venue: Preprint
+    year: 2026
     type: P
-
   # ===== 2024 =====
   - title: "Negative as Positive: Enhancing Out-of-distribution Generalization for Graph Contrastive Learning"
     url: https://arxiv.org/pdf/2405.16224
