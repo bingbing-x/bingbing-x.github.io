@@ -252,7 +252,7 @@ publications:
 
   - title: The 1st Workshop on LLM Agents for Social Simulation
     topic: agent
-    authors: "Yige Yuan, Jie Zhou, **Bingbing Xu**, Liang Pang, Dan Su, An Zhang, Teng Xiao, Fei Xu, Zhaochun Ren, et al."
+    authors: "Yige Yuan, Junkai Zhou, **Bingbing Xu**, Liang Pang, Du Su, An Zhang, Teng Xiao, Fengli Xu, Zhaochun Ren, Xu Chen"
     venue: 34th ACM International Conference on Information and Knowledge Management (CIKM 2025)
     year: 2025
     type: C
@@ -446,7 +446,7 @@ publications:
   - title: "Know You Before You Speak: User-State Modeling for LLM Personalization in Multi-Turn Conversation"
     topic: llm
     url: https://arxiv.org/abs/2605.24647
-    authors: "Jiani Luo, **Bingbing Xu**, et al."
+    authors: "Jiani Luo, Xiaoyan Zhao, Yang Zhang, Shuyi Miao, **Bingbing Xu**, Stefan Konigorski, Tat-Seng Chua"
     venue: arXiv preprint arXiv:2605.24647
     year: 2026
     type: P
@@ -459,7 +459,7 @@ publications:
   - title: "Towards Knowledgeable Deep Research: Framework and Benchmark"
     topic: agent
     url: https://doi.org/10.1145/3805712.3809617
-    authors: "Wenxuan Liu, **Bingbing Xu**, et al."
+    authors: "Wenxuan Liu, Zixuan Li, Long Bai, Chunmao Zhang, Fenghui Zhang, Zhuo Chen, Wei Li, Yuxin Zuo, Fei Wang, **Bingbing Xu**, Xuhui Jiang, Jin Zhang, Xiaolong Jin, Jiafeng Guo, Tat-Seng Chua, Xueqi Cheng"
     venue: 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2026)
     year: 2026
     type: C
