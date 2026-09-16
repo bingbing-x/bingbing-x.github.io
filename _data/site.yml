@@ -58,10 +58,9 @@ about: >
   <a href="http://www.ict.ac.cn/sourcedb/cn/jssrck/201402/t20140221_4037648.html">Prof. Huawei Shen</a>,
   and received my B.S. from Harbin Institute of Technology (Weihai) in 2016.
 
-  My earlier work centers on graph representation learning, including spectral
-  graph neural networks such as
-  <a href="https://arxiv.org/abs/1904.07785">Graph Wavelet Neural Network</a>,
-  with applications in financial risk control and social computing.
+  My earlier work centers on graph representation learning, in particular
+  spectral graph neural networks, with applications in financial risk control
+  and social computing.
 
   My current research focuses on large language models and LLM agents —
   inference-time alignment, process reward modeling, memory and planning for
@@ -92,11 +91,6 @@ news:
       Five papers accepted at <strong>ACL 2026</strong> — three in the Main Conference
       (Chain-of-Memory, Learning from Mistakes, HAG) and two in Findings
       (ROMA, Rethinking Agentic Workflow Generation).
-  - date: 2026-01
-    kind: paper
-    text: >
-      Our paper <a href="https://arxiv.org/abs/2601.04992">Learning from Mistakes</a>
-      and several new preprints on LLM reasoning and agents are now on arXiv.
   - date: 2025-12
     kind: paper
     text: >
@@ -183,10 +177,27 @@ experience:
 #   links   可选，链接按钮
 #   image   可选，示意图文件名，放在 static/uploads/covers/ 下
 #   tldr    可选，一句话总结；填了才会出现 [Summary] 按钮
+#   topic   必填，决定在 Publications 页归到哪一组，取值见下面 topics
+#   featured / featured_rank  首页代表作；rank 小的排前面（按时间从新到旧）
+
+# Publications 页的分组顺序与显示名。key 要和论文里的 topic 对上。
+# 新增一个方向：在这里加一行，再给论文写上对应的 topic 即可。
+topics:
+  - key: llm
+    name: Large Language Models
+  - key: agent
+    name: LLM Agents
+  - key: multimodal
+    name: Multimodal Learning
+  - key: robust
+    name: Generalization &amp; Robustness
+  - key: graph
+    name: Graph Representation Learning
+
 publications:
   # ===== 2025 =====
   - title: "InfoNCE is a Free Lunch for Semantically Guided Graph Contrastive Learning"
-    featured: true
+    topic: graph
     badge: SIGIR 2025
     image: infonce-gcl.png
     authors: "Zixu Wang, **Bingbing Xu**, Yige Yuan, Huawei Shen, Xueqi Cheng"
@@ -206,6 +217,7 @@ publications:
         url: https://github.com/Camel-Prince/IFL-GCL
 
   - title: Fact-Level Calibration and Correction for Long-Form Generations
+    topic: llm
     authors: "Yige Yuan, **Bingbing Xu**, Hexiang Tan, Fei Sun, Teng Xiao, Wei Li, Huawei Shen, Xueqi Cheng"
     venue: 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2025)
     year: 2025
@@ -213,13 +225,29 @@ publications:
     meta: CCF-A
 
   - title: "MIGE: Mutually Enhanced Multimodal Instruction-Based Image Generation and Editing"
+    topic: multimodal
+    featured: true
+    featured_rank: 8
+    badge: ACM MM 2025
+    image: mige.png
+    url: https://arxiv.org/abs/2502.21291
     authors: "Xueyun Tian, Wei Li, **Bingbing Xu**, Yige Yuan, Yuanzhuo Wang, Huawei Shen"
     venue: 33rd ACM International Conference on Multimedia (MM 2025), pp. 10622-10631
     year: 2025
     type: C
     meta: CCF-A
+    tldr: >
+      A unified framework that treats instruction-based image generation and
+      editing as one task, letting the two settings reinforce each other
+      instead of being trained apart.
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2502.21291
+      - name: Code
+        url: https://github.com/Eureka-Maggie/MIGE
 
   - title: The 1st Workshop on LLM Agents for Social Simulation
+    topic: agent
     authors: "Yige Yuan, Jie Zhou, **Bingbing Xu**, Liang Pang, Dan Su, An Zhang, Teng Xiao, Fei Xu, Zhaochun Ren, et al."
     venue: 34th ACM International Conference on Information and Knowledge Management (CIKM 2025)
     year: 2025
@@ -228,18 +256,31 @@ publications:
 
   # ===== 2026 =====
   - title: "ROMA: Real-time Omni-Multimodal Assistant with Interactive Streaming Understanding"
+    topic: multimodal
+    featured: true
+    featured_rank: 5
+    badge: ACL 2026 Findings
+    image: roma.png
     url: https://arxiv.org/abs/2601.10323
     authors: "Xueyun Tian, Wei Li, **Bingbing Xu**, Hanyu Dong, Yuanzhuo Wang, Huawei Shen"
     venue: "Findings of the Association for Computational Linguistics: ACL 2026, pp. 23018-23039"
     year: 2026
     type: C
     meta: CCF-A
+    tldr: >
+      An omni-multimodal assistant that understands audio-visual streams as
+      they arrive, so it can respond mid-stream instead of waiting for the
+      input to finish.
     links:
       - name: Paper
         url: https://arxiv.org/abs/2601.10323
+      - name: Project
+        url: https://eureka-maggie.github.io/ROMA_show/
 
   - title: "Chain-of-Memory: Lightweight Memory Construction with Dynamic Evolution for LLM Agents"
+    topic: agent
     featured: true
+    featured_rank: 2
     badge: ACL 2026
     image: chain-of-memory.png
     authors: "Xingchen Xu, **Bingbing Xu**, Xueyun Tian, Zhaochen Huang, Rui Chen, Yunfan Lu, Huawei Shen"
@@ -257,32 +298,60 @@ publications:
         url: https://arxiv.org/abs/2601.14287
 
   - title: "Do We Always Need Query-Level Workflows? Rethinking Agentic Workflow Generation for Multi-Agent Systems"
+    topic: agent
     authors: "Zixu Wang, **Bingbing Xu**, Yige Yuan, Huawei Shen, Xueqi Cheng"
     venue: "Findings of the Association for Computational Linguistics: ACL 2026, pp. 5149-5165"
     year: 2026
     type: C
     meta: CCF-A
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2601.11147
 
   - title: "Learning from Mistakes: Negative Reasoning Samples Enhance Out-of-Domain Generalization"
+    topic: llm
+    featured: true
+    featured_rank: 3
+    badge: ACL 2026
+    image: glow.png
     url: https://arxiv.org/abs/2601.04992
     authors: "Xueyun Tian, Minghao Ma, **Bingbing Xu**, Nuoyan Lyu, Wei Li, Hanyu Dong, Zhendong Chu, Yuanzhuo Wang, Huawei Shen"
     venue: 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026)
     year: 2026
     type: C
     meta: Main Track; CCF-A
+    tldr: >
+      Negative reasoning samples — the wrong chains models usually discard —
+      turn out to carry the signal that drives out-of-domain generalization.
     links:
       - name: Paper
         url: https://arxiv.org/abs/2601.04992
+      - name: Code
+        url: https://github.com/Eureka-Maggie/GLOW
 
   - title: "HAG: Hierarchical Demographic Tree-based Agent Generation for Topic-Adaptive Simulation"
+    topic: agent
+    featured: true
+    featured_rank: 4
+    badge: ACL 2026
+    image: hag.png
     authors: "Rui Chen, Tong Wu, **Bingbing Xu**, Jiawei Luo, Xingchen Xu, Huawei Shen"
     venue: 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026)
     year: 2026
     type: C
     meta: Main Track; CCF-A
+    tldr: >
+      A hierarchical demographic tree generates agent populations that adapt
+      to the topic under discussion, making social simulation both faithful
+      and controllable.
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2601.05656
 
   - title: Inference-Time Alignment in Continuous Space
+    topic: llm
     featured: true
+    featured_rank: 1
     badge: NeurIPS 2026
     image: sea-alignment.png
     authors: "Yige Yuan, Teng Xiao, Yunfan Lu, **Bingbing Xu**, Shuchang Tao, Yunqi Qiu, Huawei Shen, Xueqi Cheng"
@@ -300,7 +369,9 @@ publications:
         url: https://arxiv.org/abs/2505.20081
 
   - title: Incentivizing Strong Reasoning from Weak Supervision
+    topic: llm
     featured: true
+    featured_rank: 6
     badge: EACL 2026
     image: w2sr.png
     authors: "Yige Yuan, Teng Xiao, Shuchang Tao, Xue Wang, Jinbo Gao, Bolin Ding, **Bingbing Xu**"
@@ -320,13 +391,25 @@ publications:
         url: https://github.com/yuanyige/w2sr
 
   - title: Multi-Personality Generation of LLMs at Decoding-Time
+    topic: llm
+    featured: true
+    featured_rank: 7
+    badge: WSDM 2026
+    image: mpg.png
     authors: "Rui Chen, Yang Li, Yige Yuan, **Bingbing Xu**, Huawei Shen"
     venue: 19th ACM International Conference on Web Search and Data Mining (WSDM 2026)
     year: 2026
     type: C
     meta: CCF-B
+    tldr: >
+      Multiple personality traits are composed at decoding time, letting one
+      LLM express a target persona without any personality-specific training.
+    links:
+      - name: Code
+        url: https://github.com/Libra117/MPG
 
   - title: "HetDualCL: Dual-Encoder Contrastive Learning for Heterogeneous Graphs"
+    topic: graph
     authors: "Yang Li, Jianhua Chai, Wenjie Zhang, Chao Li, Xiang Zhao, **Bingbing Xu**, Shichao Zhang"
     venue: Neural Networks, Article 109205
     year: 2026
@@ -334,6 +417,7 @@ publications:
     meta: Elsevier; CCF-B, SCI-I
 
   - title: "Know You Before You Speak: User-State Modeling for LLM Personalization in Multi-Turn Conversation"
+    topic: llm
     url: https://arxiv.org/abs/2605.24647
     authors: "Jiawei Luo, Xiang Zhao, Yi Zhang, Shuai Miao, **Bingbing Xu**, Stefan Konigorski, Tat-Seng Chua"
     venue: arXiv preprint arXiv:2605.24647
@@ -344,6 +428,7 @@ publications:
         url: https://arxiv.org/abs/2605.24647
 
   - title: "Towards Knowledgeable Deep Research: Framework and Benchmark"
+    topic: agent
     url: https://arxiv.org/abs/2604.07720
     authors: "Wenjun Liu, Zhen Li, Lei Bai, Chao Zhang, Fan Zhang, Zhi Chen, Wei Li, Yuan Zuo, Fei Wang, **Bingbing Xu**, et al."
     venue: arXiv preprint arXiv:2604.07720
@@ -354,6 +439,7 @@ publications:
         url: https://arxiv.org/abs/2604.07720
 
   - title: Towards Robust Process Reward Modeling via Noise-Aware Learning
+    topic: llm
     url: https://arxiv.org/abs/2601.12748
     authors: "Bin Xie, **Bingbing Xu**, Xueyun Tian, Yi Chen, Huawei Shen"
     venue: arXiv preprint arXiv:2601.12748
@@ -364,6 +450,7 @@ publications:
         url: https://arxiv.org/abs/2601.12748
 
   - title: "ACE-Align: Attribute Causal Effect Alignment for Cultural Values under Varying Persona Granularities"
+    topic: llm
     url: https://arxiv.org/abs/2601.12962
     authors: "Jiawei Luo, **Bingbing Xu**, Rui Chen, Xiang Zhao, Yi Zhang, Liang Pang, Zhaochen Huang, Tat-Seng Chua, et al."
     venue: arXiv preprint arXiv:2601.12962
@@ -374,6 +461,7 @@ publications:
         url: https://arxiv.org/abs/2601.12962
 
   - title: "RPO: Decoupling Training Trajectories from Inference Responses for LLM Reasoning"
+    topic: llm
     url: https://arxiv.org/abs/2601.11960
     authors: "Jinsheng Wang, **Bingbing Xu**, Yige Yuan, Bin Xie, Xiaoqian Sun, Huawei Shen"
     venue: arXiv preprint arXiv:2601.11960
@@ -384,6 +472,7 @@ publications:
         url: https://arxiv.org/abs/2601.11960
 
   - title: "Beyond Entangled Planning: Task-Decoupled Planning for Long-Horizon Agents"
+    topic: agent
     url: https://arxiv.org/abs/2601.07577
     authors: "Yang Li, **Bingbing Xu**, Xueyun Tian, Xingchen Xu, Huawei Shen"
     venue: arXiv preprint arXiv:2601.07577
@@ -394,6 +483,7 @@ publications:
         url: https://arxiv.org/abs/2601.07577
 
   - title: "GIFT: Games as Informal Training for Generalizable LLMs"
+    topic: llm
     url: https://arxiv.org/abs/2601.05633
     authors: "Nuoyan Lyu, **Bingbing Xu**, Xueyun Tian, Wen Meng, Yige Yuan, Yi Zhang, Zhaochen Huang, Tat-Seng Chua, et al."
     venue: arXiv preprint arXiv:2601.05633
@@ -404,6 +494,7 @@ publications:
         url: https://arxiv.org/abs/2601.05633
 
   - title: "From Outcomes to Processes: Guiding PRM Learning from ORM for Inference-Time Alignment"
+    topic: llm
     # TODO Scholar 列表中这篇未给出作者与发表信息，请补充
     authors: "**Bingbing Xu**, et al."
     venue: Preprint
@@ -411,6 +502,7 @@ publications:
     type: P
   # ===== 2024 =====
   - title: "Negative as Positive: Enhancing Out-of-distribution Generalization for Graph Contrastive Learning"
+    topic: robust
     url: https://arxiv.org/pdf/2405.16224
     authors: "Zixu Wang, **Bingbing Xu**, Yige Yuan, Huawei Shen, Xueqi Cheng"
     venue: SIGIR 2024
@@ -421,6 +513,7 @@ publications:
         url: https://arxiv.org/pdf/2405.16224
 
   - title: "TEA: Test-time Energy Adaptation"
+    topic: robust
     url: https://arxiv.org/abs/2311.14402
     authors: "Yige Yuan, **Bingbing Xu**, Liang Hou, Fei Sun, Huawei Shen, Xueqi Cheng"
     venue: IEEE/CVF Computer Vision and Pattern Recognition Conference (CVPR 2024)
@@ -439,6 +532,7 @@ publications:
       energy-based model and aligns its distribution with the test data's.
 
   - title: "PDE+: Enhancing Generalization via PDE with Adaptive Distributional Diffusion"
+    topic: robust
     url: https://arxiv.org/abs/2305.15835
     authors: "Yige Yuan, **Bingbing Xu**, Bo Lin, Liang Hou, Fei Sun, Huawei Shen, Xueqi Cheng"
     venue: Annual AAAI Conference on Artificial Intelligence (AAAI 2024)
@@ -463,6 +557,7 @@ publications:
       of its solution.
 
   - title: "Towards Generalizable Graph Contrastive Learning: An Information Theory Perspective"
+    topic: robust
     url: https://arxiv.org/abs/2211.10929
     authors: "Yige Yuan, **Bingbing Xu**, Huawei Shen, Qi Cao, Keting Cen, Wen Zheng, Xueqi Cheng"
     venue: Neural Networks, Volume 172
@@ -480,6 +575,7 @@ publications:
       for it, and designs the InfoAdv framework guided by that bound.
 
   - title: History Driven Sampling for Scalable Graph Neural Networks
+    topic: graph
     url: https://arxiv.org/abs/2211.09813
     authors: "Yang Li, **Bingbing Xu**, Fei Sun, Qi Cao, Yige Yuan, Huawei Shen"
     venue: DASFAA 2024
@@ -490,6 +586,7 @@ publications:
         url: https://arxiv.org/abs/2211.09813
 
   - title: "Graph Domain Adaptation: Challenges, Progress and Prospects"
+    topic: robust
     url: https://arxiv.org/pdf/2402.00904
     authors: "Boshen Shi, Yongqing Wang, Fangda Guo, **Bingbing Xu**, Huawei Shen, Xueqi Cheng"
     venue: arXiv preprint
@@ -500,6 +597,7 @@ publications:
         url: https://arxiv.org/pdf/2402.00904
 
   - title: "Bridged-GNN: Knowledge Bridge Learning for Effective Knowledge Transfer"
+    topic: graph
     url: https://arxiv.org/abs/2308.09499
     authors: "Wendong Bi, Xueqi Cheng, **Bingbing Xu**, Xiaoqian Sun, Li Xi, Huawei Shen"
     venue: CIKM 2023
@@ -512,6 +610,7 @@ publications:
         url: https://github.com/wendongbi/Bridged-GNN
 
   - title: "DCGNN: Dual-Channel Graph Neural Network for Social Bot Detection"
+    topic: graph
     url: https://dl.acm.org/doi/10.1145/3583780.3615237
     authors: "Nuoyan Lyv, **Bingbing Xu**, Fangda Guo, Huawei Shen"
     venue: CIKM 2023
@@ -522,6 +621,7 @@ publications:
         url: https://dl.acm.org/doi/10.1145/3583780.3615237
 
   - title: "DyTed: Disentangled Representation Learning for Discrete-time Dynamic Graph"
+    topic: graph
     url: https://dl.acm.org/doi/pdf/10.1145/3580305.3599319
     authors: "Kaike Zhang, Qi Cao, Gaolin Fang, **Bingbing Xu**, Hongjian Zou, Huawei Shen, Xueqi Cheng"
     venue: KDD 2023
@@ -532,6 +632,7 @@ publications:
         url: https://dl.acm.org/doi/pdf/10.1145/3580305.3599319
 
   - title: "MIDLG: Mutual Information based Dual Level GNN for Transaction Fraud Complaint Verification"
+    topic: graph
     url: https://dl.acm.org/doi/pdf/10.1145/3580305.3599865
     authors: "Wen Zheng, **Bingbing Xu**, Emiao Lu, Yang Li, Xuan Zong, Huawei Shen"
     venue: KDD 2023
@@ -542,6 +643,7 @@ publications:
         url: https://dl.acm.org/doi/pdf/10.1145/3580305.3599865
 
   - title: Simple Multi-view Can Bring Powerful Graph Neural Network
+    topic: graph
     url: https://dl.acm.org/doi/abs/10.1145/3543873.3587375
     authors: "**Bingbing Xu**, Yang Li, Qi Cao, Huawei Shen"
     venue: Companion Proceedings of WWW 2023
@@ -552,6 +654,7 @@ publications:
         url: https://dl.acm.org/doi/abs/10.1145/3543873.3587375
 
   - title: Towards Deeper Graph Neural Networks via Layer-Adaptive
+    topic: graph
     url: https://dl.acm.org/doi/abs/10.1145/3543873.3587323
     authors: "**Bingbing Xu**, Bin Xie, Huawei Shen"
     venue: Companion Proceedings of WWW 2023
@@ -562,6 +665,7 @@ publications:
         url: https://dl.acm.org/doi/abs/10.1145/3543873.3587323
 
   - title: "Predicting the Silent Majority on Graphs: Knowledge Transferable Graph Neural Network"
+    topic: graph
     url: https://arxiv.org/abs/2302.00873
     authors: "Wendong Bi, **Bingbing Xu**, Xiaoqian Sun, Li Xu, Huawei Shen, Xueqi Cheng"
     venue: WWW 2023
@@ -574,6 +678,7 @@ publications:
         url: https://github.com/wendongbi/KT-GNN
 
   - title: "When Spatio-Temporal Meet Wavelets: Disentangled Traffic Forecasting via Efficient Spectral Graph Attention Networks"
+    topic: graph
     url: https://arxiv.org/abs/2112.02740
     authors: "Yuchen Fang, Yanjun Qin, Haiyong Luo, Fang Zhao, **Bingbing Xu**, Chenxing Wang, Liang Zeng"
     venue: ICDE 2023
@@ -586,12 +691,14 @@ publications:
   # 这篇来自 ICT 官方主页，但该页未标注年份。我暂按 2020 归类，
   # TODO 请核对年份是否正确，并补上在线链接（url / links）
   - title: A Survey on Graph Convolutional Neural Network
+    topic: graph
     authors: "**Bingbing Xu**, Keting Cen, Junjie Huang, Huawei Shen, Xueqi Cheng"
     venue: Chinese Journal of Computers (计算机学报)
     year: 2020
     type: J
 
   - title: Location-aware Convolutional Neural Networks for Graph Classification
+    topic: graph
     url: https://www.sciencedirect.com/science/article/abs/pii/S0893608022003008
     authors: "Zhaohui Wang, Qi Cao, Huawei Shen, **Bingbing Xu**, Keting Cen, Xueqi Cheng"
     venue: Neural Networks
@@ -602,7 +709,7 @@ publications:
         url: https://www.sciencedirect.com/science/article/abs/pii/S0893608022003008
 
   - title: "Company-as-Tribe: Company Financial Risk Assessment on Tribe-Style Graph with Hierarchical Graph Neural Networks"
-    featured: true
+    topic: graph
     badge: KDD 2022
     image: th-gnn.png
     url: https://arxiv.org/abs/2301.13492
@@ -620,7 +727,7 @@ publications:
       We model company financial risk on tribe-style graphs with hierarchical 
       GNNs, capturing both intra-tribe and inter-tribe risk propagation.
   - title: "Towards Consumer Loan Fraud Detection: Graph Neural Networks with Role-Constrained Conditional Random Field"
-    featured: true
+    topic: graph
     badge: AAAI 2021
     image: grc-fraud.png
     url: https://cdn.aaai.org/ojs/16582/16582-13-20076-1-2-20210518.pdf
@@ -637,6 +744,7 @@ publications:
       the distinct roles participants play in loan fraud, improving detection 
       on real financial networks.
   - title: Label-Consistency Based Graph Neural Networks for Semi-Supervised Node Classification
+    topic: graph
     url: https://arxiv.org/abs/2007.13435
     authors: "**Bingbing Xu**, Junjie Huang, Liang Hou, Huawei Shen, Jinhua Gao, Xueqi Cheng"
     venue: SIGIR 2020
@@ -649,7 +757,7 @@ publications:
         url: https://github.com/Eilene/LCGNN
 
   - title: Graph Convolutional Networks Using Heat Kernel for Semi-Supervised Learning
-    featured: true
+    topic: graph
     badge: IJCAI 2019
     image: graphheat.png
     url: http://www.arxiv.org/abs/2007.16002
@@ -668,7 +776,7 @@ publications:
       enforce smoothness in signal variation, letting the model capture 
       low-order neighborhood structure more effectively.
   - title: Graph Wavelet Neural Network
-    featured: true
+    topic: graph
     badge: ICLR 2019
     image: gwnn.png
     url: https://arxiv.org/abs/1904.07785
@@ -723,12 +831,13 @@ grants:
     date: 2022 - 2024
 
 # ---------- 学术服务 ----------
-# 原主页这一节被整段注释掉了；下面是从注释里挖出的旧内容，停留在 2022 年。
+# 暂不展示。以后想加回来，填上下面的条目即可，CV 页会自动出现这一节：
+#   services:
+#     - label: Conference Reviewer
+#       text: ...
+#     - label: Journal Reviewer
+#       text: ...
 services:
-  - label: Conference Reviewer
-    text: ICANN 2020, ASONAM 2020, ECML-PKDD 2022    # TODO 补充近年担任的审稿/AC 等
-  - label: Journal Reviewer
-    text: Neural Networks, IEEE Transactions on Computational Social Systems, Information Processing and Management, PLOS ONE
 
 # ---------- 页脚 ----------
 # 页脚显示的「最后更新」。留空则自动显示构建日期（英文月份格式）。

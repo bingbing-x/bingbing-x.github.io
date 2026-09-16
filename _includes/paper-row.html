@@ -12,6 +12,8 @@
   <p class="row-venue">
     {%- if pub.type %}<span class="kind kind-{{ pub.type | downcase }}">{{ pub.type }}</span>{% endif -%}
     {{ pub.venue }}
+    {%- comment %} 列表按方向分组，年份不再体现在小标题上，所以写在这里 {% endcomment -%}
+    {%- if pub.year %}<span class="row-meta"> &middot; {{ pub.year }}</span>{% endif -%}
     {%- if pub.meta and pub.meta != '' %}<span class="row-meta"> &middot; {{ pub.meta }}</span>{% endif -%}
   </p>
   {%- if pub.links.size > 0 %}

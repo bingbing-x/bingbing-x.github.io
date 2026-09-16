@@ -8,22 +8,34 @@ permalink: /publications/
 <section>
   <h2>Publications</h2>
   <p class="lede">
-    {{ d.publications.size }} papers.
     <span class="legend"><span class="kind kind-c">C</span> conference</span>
     <span class="legend"><span class="kind kind-j">J</span> journal</span>
     <span class="legend"><span class="kind kind-p">P</span> preprint</span>
   </p>
 
-  {%- assign by_year = d.publications | group_by: "year" | sort: "name" | reverse %}
+  {%- comment %}
+    按研究方向分组，组的顺序和名称来自 _data/site.yml 的 topics。
+    组内仍按年份从新到旧排。
+  {% endcomment -%}
 
   <nav class="years">
-    {%- for g in by_year %}<a href="#y{{ g.name }}">{{ g.name }}</a>{% endfor %}
+    {%- for t in d.topics %}
+    {%- assign items = d.publications | where: "topic", t.key %}
+    {%- if items.size > 0 %}<a href="#t{{ t.key }}">{{ t.name }}</a>{% endif %}
+    {%- endfor %}
   </nav>
 
-  {%- for g in by_year %}
-  <h3 class="year" id="y{{ g.name }}">{{ g.name }}<span class="year-count">{{ g.items.size }}</span></h3>
-  {%- for pub in g.items %}
+  {%- for t in d.topics %}
+  {%- assign items = d.publications | where: "topic", t.key | sort: "year" | reverse %}
+  {%- if items.size > 0 %}
+  <h3 class="year" id="t{{ t.key }}">{{ t.name }}</h3>
+  {%- comment %} 先列已发表的（会议/期刊），预印本排在这一组的末尾 {% endcomment -%}
+  {%- for pub in items %}{% unless pub.type == 'P' %}
   {% include paper-row.html pub=pub %}
-  {%- endfor %}
+  {%- endunless %}{% endfor %}
+  {%- for pub in items %}{% if pub.type == 'P' %}
+  {% include paper-row.html pub=pub %}
+  {%- endif %}{% endfor %}
+  {%- endif %}
   {%- endfor %}
 </section>

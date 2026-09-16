@@ -16,12 +16,13 @@ permalink: /
   {%- endif %}
 </section>
 
-{%- assign featured = d.publications | where: "featured", true %}
+{%- comment %} 代表作按 featured_rank 排序（1 最新），与 YAML 里的书写顺序无关 {% endcomment -%}
+{%- assign featured = d.publications | where: "featured", true | sort: "featured_rank" %}
 {%- if featured.size > 0 %}
 <section>
   <div class="head-row">
     <h2>Selected Publications</h2>
-    <a class="more" href="{{ '/publications/' | relative_url }}">All {{ d.publications.size }} publications &rarr;</a>
+    <a class="more" href="{{ '/publications/' | relative_url }}">All publications &rarr;</a>
   </div>
   {%- for pub in featured %}
   {% include paper-card.html pub=pub %}
