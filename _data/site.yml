@@ -204,7 +204,6 @@ publications:
     venue: 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2025)
     year: 2025
     type: C
-    meta: CCF-A
 
     tldr: >
       We show that InfoNCE alone, with proper semantic guidance, is sufficient 
@@ -223,7 +222,6 @@ publications:
     venue: 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2025)
     year: 2025
     type: C
-    meta: CCF-A
     url: https://doi.org/10.1145/3726302.3730195
     links:
       - name: Paper
@@ -234,7 +232,7 @@ publications:
   - title: "MIGE: Mutually Enhanced Multimodal Instruction-Based Image Generation and Editing"
     topic: multimodal
     featured: true
-    featured_rank: 8
+    featured_rank: 9
     badge: ACM MM 2025
     image: mige.png
     url: https://doi.org/10.1145/3746027.3755811
@@ -242,7 +240,6 @@ publications:
     venue: 33rd ACM International Conference on Multimedia (MM 2025), pp. 10622-10631
     year: 2025
     type: C
-    meta: CCF-A
     tldr: >
       A unified framework that treats instruction-based image generation and
       editing as one task, letting the two settings reinforce each other
@@ -273,7 +270,6 @@ publications:
     venue: "Findings of the Association for Computational Linguistics: ACL 2026, pp. 23018-23039"
     year: 2026
     type: C
-    meta: CCF-A
     tldr: >
       An omni-multimodal assistant that understands audio-visual streams as
       they arrive, so it can respond mid-stream instead of waiting for the
@@ -294,7 +290,7 @@ publications:
     venue: "64th Annual Meeting of the Association for Computational Linguistics (ACL 2026), pp. 11618-11631"
     year: 2026
     type: C
-    meta: Main Track; CCF-A
+    meta: Main Track
 
     tldr: >
       A lightweight memory construction mechanism with dynamic evolution, 
@@ -309,15 +305,24 @@ publications:
 
   - title: "Do We Always Need Query-Level Workflows? Rethinking Agentic Workflow Generation for Multi-Agent Systems"
     topic: agent
+    featured: true
+    featured_rank: 5
+    badge: ACL 2026
+    image: scale.png
     authors: "Zixu Wang, **Bingbing Xu**, Yige Yuan, Huawei Shen, Xueqi Cheng"
     venue: "Findings of the Association for Computational Linguistics: ACL 2026, pp. 5149-5165"
     year: 2026
     type: C
-    meta: CCF-A
+    tldr: >
+      Query-level workflow generation costs far more than task-level yet
+      barely helps — a single well-optimized workflow already covers most
+      queries.
     url: https://aclanthology.org/2026.findings-acl.254/
     links:
       - name: Paper
         url: https://aclanthology.org/2026.findings-acl.254/
+      - name: Code
+        url: https://github.com/Camel-Prince/SCALE
 
   - title: "Learning from Mistakes: Negative Reasoning Samples Enhance Out-of-Domain Generalization"
     topic: llm
@@ -330,7 +335,7 @@ publications:
     venue: "64th Annual Meeting of the Association for Computational Linguistics (ACL 2026), pp. 29689-29711"
     year: 2026
     type: C
-    meta: Main Track; CCF-A
+    meta: Main Track
     tldr: >
       Negative reasoning samples — the wrong chains models usually discard —
       turn out to carry the signal that drives out-of-domain generalization.
@@ -350,7 +355,7 @@ publications:
     venue: "64th Annual Meeting of the Association for Computational Linguistics (ACL 2026), pp. 25890-25906"
     year: 2026
     type: C
-    meta: Main Track; CCF-A
+    meta: Main Track
     tldr: >
       A hierarchical demographic tree generates agent populations that adapt
       to the topic under discussion, making social simulation both faithful
@@ -365,7 +370,7 @@ publications:
   - title: Inference-Time Alignment in Continuous Space
     topic: llm
     featured: true
-    featured_rank: 7
+    featured_rank: 8
     badge: NeurIPS 2025
     image: sea-alignment.png
     url: https://openreview.net/forum?id=9teQltJgBo
@@ -373,7 +378,6 @@ publications:
     venue: Advances in Neural Information Processing Systems 38 (NeurIPS 2025), pp. 152837-152867
     year: 2025
     type: C
-    meta: CCF-A
 
     tldr: >
       We reformulate alignment as an iterative optimization over an energy 
@@ -388,7 +392,7 @@ publications:
   - title: Incentivizing Strong Reasoning from Weak Supervision
     topic: llm
     featured: true
-    featured_rank: 5
+    featured_rank: 6
     badge: EACL 2026
     url: https://aclanthology.org/2026.eacl-long.336/
     image: w2sr.png
@@ -396,7 +400,6 @@ publications:
     venue: "19th Conference of the European Chapter of the Association for Computational Linguistics (EACL 2026), pp. 7138-7156"
     year: 2026
     type: C
-    meta: CCF-B
 
     tldr: >
       We show that a weak teacher — far smaller and less performant than the 
@@ -411,14 +414,13 @@ publications:
   - title: Multi-Personality Generation of LLMs at Decoding-Time
     topic: llm
     featured: true
-    featured_rank: 6
+    featured_rank: 7
     badge: WSDM 2026
     image: mpg.png
     authors: "Rongxin Chen, Yunfan Li, Yige Yuan, **Bingbing Xu**, Huawei Shen"
     venue: "19th ACM International Conference on Web Search and Data Mining (WSDM 2026), pp. 58-68"
     year: 2026
     type: C
-    meta: CCF-B
     tldr: >
       Multiple personality traits are composed at decoding time, letting one
       LLM express a target persona without any personality-specific training.
@@ -436,7 +438,7 @@ publications:
     venue: Neural Networks, Volume 203, Article 109205
     year: 2026
     type: J
-    meta: Elsevier; CCF-B, SCI-I
+    meta: Elsevier
     links:
       - name: Paper
         url: https://doi.org/10.1016/j.neunet.2026.109205
@@ -461,7 +463,6 @@ publications:
     venue: 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2026)
     year: 2026
     type: C
-    meta: CCF-A
     links:
       - name: Paper
         url: https://doi.org/10.1145/3805712.3809617
@@ -530,7 +531,7 @@ publications:
     venue: "63rd Annual Meeting of the Association for Computational Linguistics (ACL 2025), pp. 19291-19307"
     year: 2025
     type: C
-    meta: Main Track; CCF-A
+    meta: Main Track
     links:
       - name: Paper
         url: https://aclanthology.org/2025.acl-long.946/
@@ -555,7 +556,7 @@ publications:
     venue: IEEE/CVF Computer Vision and Pattern Recognition Conference (CVPR 2024)
     year: 2024
     type: C
-    meta: Seattle WA, USA; Main Track; CCF-A
+    meta: Seattle WA, USA; Main Track
     links:
       - name: Paper
         url: https://openaccess.thecvf.com/content/CVPR2024/html/Yuan_TEA_Test-time_Energy_Adaptation_CVPR_2024_paper.html
@@ -574,7 +575,7 @@ publications:
     venue: Annual AAAI Conference on Artificial Intelligence (AAAI 2024)
     year: 2024
     type: C
-    meta: Vancouver, Canada; Main Track; CCF-A
+    meta: Vancouver, Canada; Main Track
     links:
       - name: Paper
         url: https://ojs.aaai.org/index.php/AAAI/article/view/29600
@@ -599,7 +600,7 @@ publications:
     venue: Neural Networks, Volume 172
     year: 2024
     type: J
-    meta: Elsevier; CCF-B, SCI-I
+    meta: Elsevier
     links:
       - name: Paper
         url: https://www.sciencedirect.com/science/article/abs/pii/S0893608024000418
