@@ -7,8 +7,11 @@
 <article class="card">
   <div class="card-visual">
     {%- if pub.image and pub.image != '' %}
-    <img src="{{ '/static/uploads/covers/' | append: pub.image | relative_url }}"
-         alt="Illustration of {{ pub.title | strip_html }}" loading="lazy">
+    {%- assign img = '/static/uploads/covers/' | append: pub.image | relative_url -%}
+    {%- comment %} 方法图细节多，点击可看原图 {% endcomment -%}
+    <a href="{{ img }}" target="_blank" rel="noopener" title="View full size">
+      <img src="{{ img }}" alt="Illustration of {{ pub.title | strip_html }}" loading="lazy">
+    </a>
     {%- else %}
     <div class="card-visual-blank" aria-hidden="true">
       <span>{{ pub.badge | default: pub.venue | truncate: 18, '' }}</span>

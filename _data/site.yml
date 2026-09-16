@@ -16,7 +16,7 @@ profile:
     - Institute of Computing Technology, Chinese Academy of Sciences
   location: No.6 Kexueyuan South Road, Zhongguancun, Haidian District, Beijing, China
   # 头像：把图片放到 static/homepage/images/ 下，这里填文件名；留空则不显示
-  photo:            # TODO 例如 avatar.jpg
+  photo: avatar.jpg
   emails:
     - xubingbing@ict.ac.cn
   links:
@@ -188,6 +188,7 @@ publications:
   - title: "InfoNCE is a Free Lunch for Semantically Guided Graph Contrastive Learning"
     featured: true
     badge: SIGIR 2025
+    image: infonce-gcl.png
     authors: "Zixu Wang, **Bingbing Xu**, Yige Yuan, Huawei Shen, Xueqi Cheng"
     venue: 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2025)
     year: 2025
@@ -198,6 +199,12 @@ publications:
       We show that InfoNCE alone, with proper semantic guidance, is sufficient 
       for graph contrastive learning — no extra objective or heavy 
       augmentation needed.
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2505.06282
+      - name: Code
+        url: https://github.com/Camel-Prince/IFL-GCL
+
   - title: Fact-Level Calibration and Correction for Long-Form Generations
     authors: "Yige Yuan, **Bingbing Xu**, Hexiang Tan, Fei Sun, Teng Xiao, Wei Li, Huawei Shen, Xueqi Cheng"
     venue: 48th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR 2025)
@@ -234,6 +241,7 @@ publications:
   - title: "Chain-of-Memory: Lightweight Memory Construction with Dynamic Evolution for LLM Agents"
     featured: true
     badge: ACL 2026
+    image: chain-of-memory.png
     authors: "Xingchen Xu, **Bingbing Xu**, Xueyun Tian, Zhaochen Huang, Rui Chen, Yunfan Lu, Huawei Shen"
     venue: 64th Annual Meeting of the Association for Computational Linguistics (ACL 2026)
     year: 2026
@@ -244,6 +252,10 @@ publications:
       A lightweight memory construction mechanism with dynamic evolution, 
       giving LLM agents persistent and continually refined memory at low 
       overhead.
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2601.14287
+
   - title: "Do We Always Need Query-Level Workflows? Rethinking Agentic Workflow Generation for Multi-Agent Systems"
     authors: "Zixu Wang, **Bingbing Xu**, Yige Yuan, Huawei Shen, Xueqi Cheng"
     venue: "Findings of the Association for Computational Linguistics: ACL 2026, pp. 5149-5165"
@@ -272,6 +284,7 @@ publications:
   - title: Inference-Time Alignment in Continuous Space
     featured: true
     badge: NeurIPS 2026
+    image: sea-alignment.png
     authors: "Yige Yuan, Teng Xiao, Yunfan Lu, **Bingbing Xu**, Shuchang Tao, Yunqi Qiu, Huawei Shen, Xueqi Cheng"
     venue: Advances in Neural Information Processing Systems 38 (NeurIPS 2026), pp. 152837-152867
     year: 2026
@@ -282,9 +295,14 @@ publications:
       We reformulate alignment as an iterative optimization over an energy 
       function on logits in continuous space, defined by the optimal RLHF 
       policy — achieving deep alignment without retraining.
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2505.20081
+
   - title: Incentivizing Strong Reasoning from Weak Supervision
     featured: true
     badge: EACL 2026
+    image: w2sr.png
     authors: "Yige Yuan, Teng Xiao, Shuchang Tao, Xue Wang, Jinbo Gao, Bolin Ding, **Bingbing Xu**"
     venue: 19th Conference of the European Chapter of the Association for Computational Linguistics (EACL 2026)
     year: 2026
@@ -295,6 +313,12 @@ publications:
       We show that a weak teacher — far smaller and less performant than the 
       student — can substantially boost student reasoning, without expert 
       supervision or costly RL.
+    links:
+      - name: Paper
+        url: https://arxiv.org/abs/2505.20072
+      - name: Code
+        url: https://github.com/yuanyige/w2sr
+
   - title: Multi-Personality Generation of LLMs at Decoding-Time
     authors: "Rui Chen, Yang Li, Yige Yuan, **Bingbing Xu**, Huawei Shen"
     venue: 19th ACM International Conference on Web Search and Data Mining (WSDM 2026)
@@ -580,6 +604,7 @@ publications:
   - title: "Company-as-Tribe: Company Financial Risk Assessment on Tribe-Style Graph with Hierarchical Graph Neural Networks"
     featured: true
     badge: KDD 2022
+    image: th-gnn.png
     url: https://arxiv.org/abs/2301.13492
     authors: "Wendong Bi, **Bingbing Xu**, Xiaoqian Sun, Li Xu, Huawei Shen, Xueqi Cheng"
     venue: KDD 2022
@@ -597,6 +622,7 @@ publications:
   - title: "Towards Consumer Loan Fraud Detection: Graph Neural Networks with Role-Constrained Conditional Random Field"
     featured: true
     badge: AAAI 2021
+    image: grc-fraud.png
     url: https://cdn.aaai.org/ojs/16582/16582-13-20076-1-2-20210518.pdf
     authors: "**Bingbing Xu**, Huawei Shen, Bingjie Sun, Rong An, Qi Cao, Xueqi Cheng"
     venue: AAAI 2021
@@ -625,6 +651,7 @@ publications:
   - title: Graph Convolutional Networks Using Heat Kernel for Semi-Supervised Learning
     featured: true
     badge: IJCAI 2019
+    image: graphheat.png
     url: http://www.arxiv.org/abs/2007.16002
     authors: "**Bingbing Xu**, Huawei Shen, Qi Cao, Keting Cen, Xueqi Cheng"
     venue: IJCAI 2019
@@ -643,6 +670,7 @@ publications:
   - title: Graph Wavelet Neural Network
     featured: true
     badge: ICLR 2019
+    image: gwnn.png
     url: https://arxiv.org/abs/1904.07785
     authors: "**Bingbing Xu**, Huawei Shen, Qi Cao, Yunqi Qiu, Xueqi Cheng"
     venue: ICLR 2019

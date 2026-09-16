@@ -299,7 +299,7 @@ h2 {
 
 .card {
   display: grid;
-  grid-template-columns: 216px minmax(0, 1fr);
+  grid-template-columns: 300px minmax(0, 1fr);
   gap: 22px;
   padding: 18px;
   margin-bottom: 16px;
@@ -311,14 +311,18 @@ h2 {
 .card:hover { border-color: var(--accent); transform: translateY(-2px); }
 
 .card-visual { position: relative; }
+.card-visual a { display: block; }
 .card-visual img {
   width: 100%;
-  max-height: 148px;
+  max-height: 210px;
   object-fit: contain;
   border-radius: 8px;
-  background: var(--bg);
+  border: 1px solid var(--line);
+  background: #fff;   /* 论文配图都是白底，深色模式下也保持白底以免线条消失 */
+  padding: 6px;
   display: block;
 }
+.card-visual a:hover img { border-color: var(--accent); }
 
 .card-visual-blank {
   display: flex;
