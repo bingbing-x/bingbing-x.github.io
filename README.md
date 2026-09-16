@@ -18,14 +18,15 @@ git push
 
 ### 加一篇论文
 
-在 `_data/site.yml` 的 `publications:` 下面加一段（放在哪都行，页面会自动按 `year` 倒序分组）：
+在 `_data/site.yml` 的 `publications:` 下面加一段（放在哪都行，页面会自动归组排序）：
 
 ```yaml
   - title: 论文标题
+    topic: llm                                # 必填，决定归到哪个方向，取值见 topics
     url: https://arxiv.org/abs/xxxx.xxxxx    # 标题的跳转链接，可省略
     authors: "张三, **Bingbing Xu**, 李四"    # 用 ** ** 括住自己的名字
     venue: NeurIPS 2027
-    year: 2027                                # 必填，决定分组
+    year: 2027                                # 必填，组内按年份倒序
     type: C                                   # C=会议 J=期刊 P=预印本
     meta: New Orleans, USA; CCF-A             # 可省略
     links:                                    # 可省略
@@ -35,13 +36,18 @@ git push
         url: https://github.com/...
 ```
 
+Publications 页按研究方向分组，分组的顺序和显示名由 `_data/site.yml` 里的
+`topics:` 决定。要新增一个方向，在 `topics:` 里加一行，再给论文写上对应的
+`topic` 即可。同一组内已发表的排在前面，预印本排在最后。
+
 ### 让一篇论文出现在首页的「Selected Publications」
 
-首页只展示标了 `featured: true` 的论文，用大卡片形式（配图 + 会议徽章 + 一句话介绍）。
-完整列表在 Publications 页。
+首页只展示标了 `featured: true` 的论文，用大卡片形式（配图 + 会议徽章 + 一句话介绍），
+按 `featured_rank` 从小到大排（1 最新）。完整列表在 Publications 页。
 
 ```yaml
     featured: true
+    featured_rank: 1                          # 首页排序，越小越靠前
     badge: NeurIPS 2027                       # 卡片左上角的徽章
     image: my-paper-fig.png                   # 配图，放在 static/uploads/covers/
     tldr: 一句话说明这篇工作解决了什么问题。
@@ -50,7 +56,7 @@ git push
 **配图可以先不放。** 没有 `image` 时，卡片会自动显示一个印着会议名的排版块，
 不会出现破图。以后把图丢进 `static/uploads/covers/` 再填上文件名即可。
 
-当前 8 篇代表作的配图都是从论文 PDF 里截的方法图（或主结果图），白底 PNG，
+当前代表作的配图都是从论文 PDF 里截的方法图（或主结果图），白底 PNG，
 宽度不超过 1400px。卡片上的图可以点击查看原图。要换图的话，截图后存成
 白底 PNG 放进 `static/uploads/covers/`，改掉 `image:` 即可。
 
@@ -96,9 +102,9 @@ _data/nav.yml           顶部导航标签
 _config.yml             站点配置（标题、URL）
 
 index.html              首页：About + 代表作卡片 + 最新 News
-publications.html       完整论文列表，按年份分组
+publications.html       完整论文列表，按研究方向分组
 news.html               完整 News 时间线
-cv.html                 经历 / 获奖 / 科研项目 / 学术服务
+cv.html                 经历 / 获奖 / 科研项目
 
 _layouts/default.html   页面外壳：顶部导航 + 左侧资料栏
 _includes/
