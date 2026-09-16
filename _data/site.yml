@@ -265,8 +265,8 @@ publications:
   - title: "ROMA: Real-time Omni-Multimodal Assistant with Interactive Streaming Understanding"
     topic: multimodal
     featured: true
-    featured_rank: 5
-    badge: ACL 2026 Findings
+    featured_rank: 4
+    badge: ACL 2026
     image: roma.png
     url: https://aclanthology.org/2026.findings-acl.1153/
     authors: "Xueyun Tian, Wei Li, **Bingbing Xu**, Heng Dong, Yuanzhuo Wang, Huawei Shen"
@@ -287,7 +287,7 @@ publications:
   - title: "Chain-of-Memory: Lightweight Memory Construction with Dynamic Evolution for LLM Agents"
     topic: agent
     featured: true
-    featured_rank: 2
+    featured_rank: 1
     badge: ACL 2026
     image: chain-of-memory.png
     authors: "Xiucheng Xu, **Bingbing Xu**, Xueyun Tian, Zihe Huang, Rongxin Chen, Yunfan Li, Huawei Shen"
@@ -304,6 +304,8 @@ publications:
     links:
       - name: Paper
         url: https://aclanthology.org/2026.acl-long.534/
+      - name: Code
+        url: https://github.com/Xiucheng-Xu/CoM
 
   - title: "Do We Always Need Query-Level Workflows? Rethinking Agentic Workflow Generation for Multi-Agent Systems"
     topic: agent
@@ -320,7 +322,7 @@ publications:
   - title: "Learning from Mistakes: Negative Reasoning Samples Enhance Out-of-Domain Generalization"
     topic: llm
     featured: true
-    featured_rank: 3
+    featured_rank: 2
     badge: ACL 2026
     image: glow.png
     url: https://aclanthology.org/2026.acl-long.1370/
@@ -341,7 +343,7 @@ publications:
   - title: "HAG: Hierarchical Demographic Tree-based Agent Generation for Topic-Adaptive Simulation"
     topic: agent
     featured: true
-    featured_rank: 4
+    featured_rank: 3
     badge: ACL 2026
     image: hag.png
     authors: "Rongxin Chen, Tianyu Wu, **Bingbing Xu**, Jiatang Luo, Xiucheng Xu, Huawei Shen"
@@ -363,7 +365,7 @@ publications:
   - title: Inference-Time Alignment in Continuous Space
     topic: llm
     featured: true
-    featured_rank: 1
+    featured_rank: 7
     badge: NeurIPS 2025
     image: sea-alignment.png
     url: https://openreview.net/forum?id=9teQltJgBo
@@ -386,7 +388,7 @@ publications:
   - title: Incentivizing Strong Reasoning from Weak Supervision
     topic: llm
     featured: true
-    featured_rank: 6
+    featured_rank: 5
     badge: EACL 2026
     url: https://aclanthology.org/2026.eacl-long.336/
     image: w2sr.png
@@ -409,7 +411,7 @@ publications:
   - title: Multi-Personality Generation of LLMs at Decoding-Time
     topic: llm
     featured: true
-    featured_rank: 7
+    featured_rank: 6
     badge: WSDM 2026
     image: mpg.png
     authors: "Rongxin Chen, Yunfan Li, Yige Yuan, **Bingbing Xu**, Huawei Shen"
@@ -858,6 +860,12 @@ awards:
 # 来源：ICT 个人主页。留空则整块不显示。
 grants:
   - text: >
+      Cognition, Reasoning and Decision-Making Mechanisms of LLM Agents for
+      Complex Scenario Simulation
+    funder: National Natural Science Foundation of China (General Program)
+    role: Principal Investigator
+    date: 2026 - 2029
+  - text: >
       Network Representation and Mining Methods for Financial Risk Perception
       and Control
     funder: National Natural Science Foundation of China (Young Scientists Fund)
@@ -869,6 +877,12 @@ grants:
     funder: China Postdoctoral Science Foundation (General Program)
     role: Principal Investigator
     date: 2022 - 2024
+  - text: >
+      Financial Anomaly Detection Algorithms Based on Stable Learning and
+      Adversarial Learning
+    funder: Tencent WeChat Rhino-Bird Focused Research Program
+    role: Principal Investigator
+    date: 2022 - 2023
 
 # ---------- 学术服务 ----------
 # 暂不展示。以后想加回来，填上下面的条目即可，CV 页会自动出现这一节：
